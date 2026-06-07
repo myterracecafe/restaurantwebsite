@@ -1,12 +1,92 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Typography */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-cormorant), "Cormorant Garamond", Georgia, serif;
+  --font-arabic: var(--font-cairo), "Segoe UI", Tahoma, sans-serif;
+
+  /* Brand — Teal (from the My Terrace logo) */
+  --color-brand-50: #f1faf9;
+  --color-brand-100: #d8f1ef;
+  --color-brand-200: #b2e3df;
+  --color-brand-300: #82cdc8;
+  --color-brand-400: #4cb0ab;
+  --color-brand-500: #3f9a93;
+  --color-brand-600: #35868f;
+  --color-brand-700: #2a6a70;
+  --color-brand-800: #21525a;
+  --color-brand-900: #1c454c;
+
+  /* Brand — Terracotta (from the My Terrace logo) */
+  --color-terra-50: #fbf3ec;
+  --color-terra-100: #f6e2d2;
+  --color-terra-200: #ecc3a3;
+  --color-terra-300: #e0a06f;
+  --color-terra-400: #d2823f;
+  --color-terra-500: #c06f2c;
+  --color-terra-600: #b76427;
+  --color-terra-700: #97511f;
+  --color-terra-800: #79421e;
+  --color-terra-900: #63381c;
+
+  /* Warm neutrals */
+  --color-cream: #fbf7f0;
+  --color-sand: #f4ece0;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+:root {
+  --background: #fbf7f0;
+  --foreground: #1c1917;
+}
+
+@layer base {
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    letter-spacing: -0.01em;
+  }
+
+  /* Arabic: switch the whole UI to Cairo and relax display letter-spacing */
+  [lang="ar"] body,
+  [dir="rtl"] {
+    font-family: var(--font-arabic);
+  }
+  [dir="rtl"] h1,
+  [dir="rtl"] h2,
+  [dir="rtl"] h3,
+  [dir="rtl"] h4 {
+    font-family: var(--font-arabic);
+    letter-spacing: 0;
+  }
+
+  ::selection {
+    background: var(--color-brand-600);
+    color: #fff;
+  }
+}
+
+@layer utilities {
+  /* Subtle text shadow for text over imagery/video */
+  .text-shadow-hero {
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45), 0 1px 3px rgba(0, 0, 0, 0.4);
+  }
+  /* Logical-direction flip for decorative icons in RTL */
+  [dir="rtl"] .rtl-flip {
+    transform: scaleX(-1);
+  }
+}
+
+/* Respect reduced-motion for background video */
+@media (prefers-reduced-motion: reduce) {
+  .motion-safe-video {
+    display: none;
+  }
 }

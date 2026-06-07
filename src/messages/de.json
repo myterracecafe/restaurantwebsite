@@ -1,82 +1,173 @@
 {
     "TopBar": {
-        "viewText": "Blick auf die historische Halbinsel",
-        "rating": "4.9 Google-Bewertung"
+        "tagline": "Historische Halbinsel & Blick aufs Marmarameer",
+        "reviews": "Google-Bewertungen"
     },
     "Navigation": {
         "home": "Startseite",
-        "menu": "Menü",
+        "menu": "Speisekarte",
         "about": "Über uns",
         "blog": "Blog",
         "gallery": "Galerie",
-        "contact": "Kontakt"
+        "contact": "Kontakt",
+        "reserve": "Reservieren"
     },
     "Hero": {
-        "welcome": "Willkommen bei My Terrace",
-        "subtitle": "Erleben Sie traditionelle türkische Küche mit atemberaubender Aussicht",
-        "cta": "Speisekarte ansehen",
-        "book": "Tisch reservieren"
+        "eyebrow": "Sultanahmet · Istanbul",
+        "title": "Rooftop-Restaurant mit Blick auf Hagia Sophia & Meer",
+        "subtitle": "Türkisches Frühstück, Kebab vom Holzkohlegrill, frische Meeresfrüchte und Shisha – serviert über den Dächern von Sultanahmet mit Panoramablick auf die historische Halbinsel.",
+        "ratingLabel": "Google-Bewertungen",
+        "ctaMenu": "Speisekarte entdecken",
+        "ctaReserve": "Per WhatsApp reservieren"
+    },
+    "Features": {
+        "eyebrow": "✽ Was wir bieten",
+        "title": "Drei Erlebnisse, für die unsere Gäste immer wieder gerne zurückkehren.",
+        "f1_title": "Authentische türkische Küche",
+        "f1_desc": "Meisterhaft gegrillte Kebabs, frischer Fisch und ein üppiges türkisches Frühstück – eine Tafel, die zugleich bodenständig und zeitlos ist.",
+        "f2_title": "Dachterrasse mit Meerblick",
+        "f2_desc": "Mitten im Herzen von Sultanahmet und doch über dem Trubel. Auf unserer Terrasse wird Istanbul nicht nur gesehen – es wird gespürt.",
+        "f3_title": "Echte Gastfreundschaft",
+        "f3_desc": "Unprätentiös, aber mit Hingabe: eine Servicekultur, die jeden Tisch, jeden Gast und jeden Augenblick wertschätzt."
     },
     "About": {
-        "title": "Über Uns",
-        "description": "Im Herzen von Sultanahmet gelegen, bietet das My Terrace Cafe Restaurant ein einzigartiges kulinarisches Erlebnis, wo Geschichte auf Geschmack trifft. Genießen Sie unsere authentischen türkischen Gerichte mit faszinierendem Blick auf die Blaue Moschee und die Hagia Sophia.",
+        "eyebrow": "Über uns",
+        "title": "Eine Geschichte mit Aussicht im Herzen von Sultanahmet",
+        "lead": "Im Herzen der historischen Halbinsel Istanbuls bietet das My Terrace Cafe Restaurant ein Genusserlebnis, bei dem Geschichte auf Geschmack trifft.",
+        "p1": "In einer der schönsten Ecken Sultanahmets, nur wenige Gehminuten von der Hagia Sophia und der Blauen Moschee entfernt, öffnet sich unsere Dachterrasse zu einem der faszinierendsten Panoramen Istanbuls: dem Marmarameer, den vorbeiziehenden Schiffen und dem goldenen Licht des Sonnenuntergangs.",
+        "p2": "Unser Tag beginnt um 08:30 Uhr mit einem üppig gedeckten türkischen Frühstück, geht am Nachmittag mit Kebab vom Holzkohlegrill und frischen Meeresfrüchten weiter und klingt bis spät in den Abend bei Shisha und Aussicht aus.",
+        "p3": "Mit herzlicher, aufrichtiger und unprätentiöser Gastfreundschaft bereiten wir jedes Gericht mit Sorgfalt zu und empfangen jeden Gast wie einen Freund. Unser Ziel ist es, nicht nur Ihren Appetit zu stillen, sondern auch Ihre Erinnerungen an Istanbul.",
         "features": {
-            "view": "Panoramablick",
-            "food": "Authentischer Geschmack",
-            "service": "Qualitätsservice"
-        }
+            "view": { "title": "Panoramablick", "desc": "Ein ungestörter Blick auf die Hagia Sophia, die Blaue Moschee und das Marmarameer." },
+            "food": { "title": "Authentischer Geschmack", "desc": "Gerichte, zubereitet nach traditionellen Rezepten mit frischen, saisonalen Zutaten." },
+            "service": { "title": "Herzlicher Service", "desc": "Türkisch, Englisch, Arabisch und Deutsch – ein Team, das in Ihrer Sprache lächelt." },
+            "location": { "title": "Zentrale Lage", "desc": "Nur wenige Gehminuten von der Hagia Sophia und der Blauen Moschee entfernt." }
+        },
+        "visitTitle": "Besuchen Sie uns",
+        "visitText": "Täglich von 08:30 bis 01:00 Uhr geöffnet. Für einen Tisch mit Aussicht empfehlen wir Ihnen, vorab zu reservieren."
     },
     "Menu": {
-        "title": "Unsere Speisekarte",
-        "subtitle": "Entdecken Sie die Aromen Anatoliens"
+        "eyebrow": "Unsere Speisekarte",
+        "title": "Die Aromen Anatoliens",
+        "subtitle": "Eine reich gedeckte Tafel – vom türkischen Frühstück über Kebab vom Holzkohlegrill bis zu frischen Meeresfrüchten und Meze.",
+        "priceNote": "Für aktuelle Preise und die Empfehlungen des Tages rufen Sie uns bitte an oder schreiben Sie uns über WhatsApp.",
+        "reserveCta": "Tisch reservieren"
+    },
+    "Video": {
+        "eyebrow": "My Terrace",
+        "title": "Im Herzen Istanbuls,",
+        "subtitle": "Eine Tafel, inspiriert von Tradition"
+    },
+    "Testimonials": {
+        "eyebrow": "Gäste erzählen",
+        "title": "Gäste aus aller Welt",
+        "subtitle": "Eine Auswahl echter Erlebnisse, geteilt in den sozialen Medien und auf Google."
+    },
+    "Consent": {
+        "text": "Wir verwenden Cookies, um Ihr Erlebnis zu verbessern und für Statistiken.",
+        "accept": "Akzeptieren",
+        "reject": "Ablehnen"
+    },
+    "Social": {
+        "eyebrow": "Instagram & TikTok",
+        "title": "Die Terrasse, über die alle posten",
+        "subtitle": "Türkisches Frühstück am Morgen, Sonnenuntergang am Abend und die Terrasse — die meistgeteilten Momente von Influencern und Gästen.",
+        "follow": "Folgen"
+    },
+    "Awards": {
+        "eyebrow": "Auszeichnungen & Anerkennung",
+        "title": "Von unabhängigen Institutionen ausgezeichnet",
+        "subtitle": "Auszeichnungen internationaler Organisationen – basierend auf den echten Bewertungen unserer Gäste.",
+        "verify": "Überprüfen"
+    },
+    "Gallery": {
+        "title": "Galerie",
+        "subtitle": "Echte Momente von unserer Aussicht, unserer Terrasse und unserer Tafel.",
+        "filterAll": "Alle",
+        "filterView": "Aussicht",
+        "filterFood": "Speisen",
+        "filterInterior": "Lokal"
+    },
+    "Blog": {
+        "latestPosts": "Neueste Beiträge",
+        "viewAll": "Alle Beiträge ansehen",
+        "title": "Blog",
+        "subtitle": "Ratgeber und Geschichten über Sultanahmet, Istanbul und die türkische Küche.",
+        "backToBlog": "Zurück zum Blog",
+        "readMore": "Weiterlesen",
+        "published": "Veröffentlicht"
+    },
+    "FAQ": {
+        "title": "Häufig gestellte Fragen",
+        "subtitle": "Die Fragen, die Gäste vor ihrem Besuch am häufigsten stellen.",
+        "q1": "Kann ich auch ohne Reservierung kommen?",
+        "a1": "Ja, wir empfangen Gäste auch ohne Reservierung sehr gern. Da es an Wochenenden und am Abend jedoch voll werden kann, empfehlen wir Ihnen, vorab zu reservieren, um sich einen Tisch mit Aussicht zu sichern.",
+        "q2": "Gibt es vegetarische oder glutenfreie Optionen auf der Speisekarte?",
+        "a2": "Ja, unsere Speisekarte umfasst sowohl vegetarische als auch glutenfreie Optionen. Wenn Sie besondere Ernährungswünsche haben, teilen Sie diese unserem Team einfach bei der Bestellung mit.",
+        "q3": "Ist Ihre Speisekarte halal?",
+        "a3": "Ja, in unserer Küche verwenden wir halal Fleisch und Produkte, sodass unsere muslimischen Gäste mit völliger Gewissheit speisen können.",
+        "q4": "Wie weit sind Sie von der Hagia Sophia und der Blauen Moschee entfernt?",
+        "a4": "My Terrace liegt etwa 8–10 Gehminuten von der Hagia Sophia und der Blauen Moschee entfernt; wir befinden uns mitten im Zentrum der historischen Halbinsel.",
+        "q5": "Wie sind Ihre Frühstückszeiten, und servieren Sie ein türkisches Frühstück?",
+        "a5": "Wir servieren jeden Morgen ab 08:30 Uhr ein üppiges türkisches Frühstück – der perfekte Start in den Tag mit Aussicht.",
+        "q6": "Von welchen Tischen aus hat man den besten Blick?",
+        "a6": "Unsere Terrassenebene besticht durch ihren Blick auf das Meer und die historische Halbinsel. Wenn Sie einen Tisch mit Aussicht wünschen, geben Sie dies einfach bei Ihrer Reservierung an.",
+        "q7": "Darf man auf der Terrasse Shisha (Wasserpfeife) rauchen?",
+        "a7": "Ja, auf unserer Terrasse können Sie Shisha bei herrlicher Aussicht genießen.",
+        "q8": "Wann ist die beste Zeit für den Sonnenuntergang?",
+        "a8": "Wir empfehlen, etwa eine Stunde vor Sonnenuntergang einzutreffen; unsere Terrasse ist ein wunderbarer Ort, um zu beobachten, wie die Sonne über dem Marmarameer untergeht.",
+        "q9": "Sind Sie familien- und kinderfreundlich?",
+        "a9": "Ja, wir bieten eine herzliche, gemütliche und familienfreundliche Atmosphäre und heißen Gäste mit Kindern jederzeit gern willkommen.",
+        "q10": "Bieten Sie Speisen zum Mitnehmen oder Lieferung an?",
+        "a10": "Ja, wir bieten sowohl Speisen zum Mitnehmen als auch Lieferung an. Sie können telefonisch oder über WhatsApp bestellen."
     },
     "Contact": {
         "title": "Kontaktieren Sie uns",
+        "subtitle": "Wir sind für Reservierungen, Fragen und besondere Anlässe für Sie da.",
+        "infoTitle": "Kontaktdaten",
         "address": "Adresse",
         "phone": "Telefon",
         "email": "E-Mail",
         "hours": "Öffnungszeiten",
+        "openDaily": "Täglich 08:30 – 01:00 Uhr",
+        "directions": "Route planen",
+        "reserveTitle": "Schnelle Reservierung",
+        "reserveText": "Für die schnellste Antwort schreiben Sie uns über WhatsApp – unser Team meldet sich umgehend bei Ihnen.",
         "form": {
             "name": "Ihr Name",
             "email": "Ihre E-Mail",
-            "message": "Nachricht",
-            "send": "Nachricht senden"
+            "message": "Ihre Nachricht",
+            "send": "Per WhatsApp senden",
+            "sending": "Wird gesendet ...",
+            "success": "Vielen Dank! WhatsApp wird geöffnet."
         }
     },
     "Footer": {
-        "rights": "Alle Rechte vorbehalten.",
+        "tagline": "Rooftop-Restaurant mit Dachterrasse in Sultanahmet mit Blick auf die Hagia Sophia und das Meer. Türkisches Frühstück, Kebab, Meeresfrüchte und Shisha.",
         "quickLinks": "Schnelllinks",
         "contact": "Kontakt",
         "hours": "Öffnungszeiten",
+        "openDaily": "Täglich: 08:30 – 01:00 Uhr",
+        "followUs": "Folgen Sie uns",
+        "rights": "Alle Rechte vorbehalten.",
         "developedBy": "Entwickelt von"
     },
-    "FAQ": {
-        "title": "Häufig gestellte Fragen",
-        "q1": "Kann ich ohne Reservierung kommen?",
-        "a1": "Ja, wir heißen Gäste ohne Reservierung herzlich willkommen. Wir empfehlen jedoch eine Reservierung, da es besonders an Wochenenden und abends sehr voll werden kann.",
-        "q2": "Gibt es vegetarische oder glutenfreie Optionen auf der Speisekarte?",
-        "a2": "Ja, unsere Speisekarte umfasst sowohl vegetarische als auch glutenfreie Optionen. Bitte informieren Sie unser Team bei der Bestellung über besondere Ernährungsbedürfnisse.",
-        "q3": "Welche Tische haben die beste Aussicht?",
-        "a3": "Unsere Terrassenetage zeichnet sich durch den Blick auf das Meer und die historische Halbinsel aus. Wenn Sie einen Tisch mit Aussicht bevorzugen, geben Sie dies einfach bei Ihrer Reservierung an.",
-        "q4": "Bieten Sie Lieferung oder Abholung an?",
-        "a4": "Ja, wir bieten sowohl Liefer- als auch Abholservice an. Sie können über unsere Website oder telefonisch bestellen."
-    },
-    "Features": {
-        "subtitle": "✽ Was wir bieten?",
-        "title": "Drei Grunderlebnisse, die unsere Besucher immer wieder kommen lassen.",
-        "f1_title": "Traditionelle türkische Küche",
-        "f1_desc": "Ein Tisch, der sowohl lokal als auch universell ist, mit fachmännisch zubereiteten Kebabs, frischem Fisch und gemischtem Frühstück.",
-        "f2_title": "Terrasse mit Meerblick",
-        "f2_desc": "Mitten in Sultanahmet, aber fernab vom Lärm. Auf unserer Terrasse mit Meerblick wird Istanbul nicht nur gesehen, sondern gefühlt.",
-        "f3_title": "Authentischer Ort, Echter Service",
-        "f3_desc": "Mit einem unprätentiösen, aber hingebungsvollen Verständnis; eine Servicekultur, die jeden Tisch, jeden Gast, jeden Moment respektiert."
-    },
-    "Video": {
-        "title": "Im Herzen von Istanbul,",
-        "subtitle": "Von Tradition inspirierte Tische"
-    },
-    "Blog": {
-        "latestPosts": "Neueste Beiträge",
-        "viewAll": "Alle Beiträge anzeigen"
+    "Seo": {
+        "faqTitle": "Häufige Fragen",
+        "faqDescription": "Häufige Fragen zu My Terrace: halal, Aussicht, Frühstückszeiten, Shisha, Entfernung zur Hagia Sophia und Reservierung.",
+        "reservationsTitle": "Reservierung",
+        "reservationsDescription": "Reservieren Sie einen Tisch mit Aussicht im My Terrace. Schnelle Reservierung per WhatsApp oder Telefon. Täglich 08:30–01:00 Uhr.",
+        "homeTitle": "Rooftop-Restaurant Sultanahmet mit Hagia-Sophia-Blick",
+        "homeDescription": "Dachterrasse in Sultanahmet mit Blick auf Hagia Sophia, Blaue Moschee & Marmarameer. Türkisches Frühstück, Kebab, Meeresfrüchte & Shisha. Täglich 08:30–01:00 Uhr. Jetzt reservieren.",
+        "menuTitle": "Speisekarte – Türk. Frühstück, Kebab & Meeresfrüchte",
+        "menuDescription": "Die Speisekarte von My Terrace: üppiges türkisches Frühstück, Kebab vom Holzkohlegrill, frische Meeresfrüchte, Meze & Desserts – im Herzen Sultanahmets, mit Aussicht.",
+        "aboutTitle": "Über uns – Sultanahmets Dachterrasse mit Aussicht",
+        "aboutDescription": "Die Geschichte des My Terrace Cafe Restaurant: eine Dachterrasse im Herzen Sultanahmets mit Blick auf Hagia Sophia & Marmarameer, authentische türkische Küche und herzlicher Service.",
+        "galleryTitle": "Galerie – Aussicht, Terrasse & Aromen",
+        "galleryDescription": "Echte Fotos von My Terrace: der Blick auf die historische Halbinsel und das Marmarameer, unsere Terrasse und unsere Tafel – Sultanahmets schönstes Restaurant mit Aussicht.",
+        "blogTitle": "Blog – Reiseführer für Sultanahmet & Istanbul",
+        "blogDescription": "Ratgeber zu Frühstück mit Aussicht in Sultanahmet, Ausflugszielen in der Nähe und türkischer Küche. Der Blog des My Terrace Cafe Restaurant.",
+        "contactTitle": "Kontakt & Reservierungen",
+        "contactDescription": "Kontakt zum My Terrace Cafe Restaurant: Küçük Ayasofya, Fatih/Istanbul. Telefon, WhatsApp, Anfahrt und Reservierungen. Täglich 08:30–01:00 Uhr geöffnet."
     }
 }

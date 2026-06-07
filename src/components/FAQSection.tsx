@@ -1,40 +1,36 @@
 'use client';
 
-import { useState } from 'react';
 import { useTranslations } from 'next-intl';
 import { ChevronDown } from 'lucide-react';
+import { FAQ_KEYS } from '@/data/faq';
 
 export default function FAQSection() {
     const t = useTranslations('FAQ');
-    const [openIndex, setOpenIndex] = useState<number | null>(null);
-
-    const faqs = [
-        { q: t('q1'), a: t('a1') },
-        { q: t('q2'), a: t('a2') },
-        { q: t('q3'), a: t('a3') },
-        { q: t('q4'), a: t('a4') },
-    ];
 
     return (
-        <section className="py-20 bg-white">
-            <div className="container mx-auto px-4 max-w-3xl">
-                <h2 className="text-4xl font-bold text-center mb-12 text-zinc-900">{t('title')}</h2>
-                <div className="space-y-4">
-                    {faqs.map((faq, index) => (
-                        <div key={index} className="border border-zinc-200 rounded-lg overflow-hidden bg-zinc-50">
-                            <button
-                                onClick={() => setOpenIndex(openIndex === index ? null : index)}
-                                className="w-full flex justify-between items-center p-6 text-left hover:bg-zinc-100 transition-colors"
-                            >
-                                <span className="font-semibold text-zinc-900">{faq.q}</span>
-                                <ChevronDown className={`transform transition-transform ${openIndex === index ? 'rotate-180' : ''} text-amber-600`} />
-                            </button>
-                            {openIndex === index && (
-                                <div className="px-6 pb-6 text-zinc-600">
-                                    {faq.a}
-                                </div>
-                            )}
-                        </div>
+        <section className="bg-cream py-20">
+            <div className="container mx-auto max-w-3xl px-4">
+                <div className="mb-12 text-center">
+                    <h2 className="text-3xl font-semibold text-stone-900 md:text-4xl">{t('title')}</h2>
+                    <p className="mt-3 text-stone-600">{t('subtitle')}</p>
+                </div>
+
+                {/* Native <details> keeps every answer in the DOM (crawlable + accessible) */}
+                <div className="space-y-3">
+                    {FAQ_KEYS.map(({ q, a }) => (
+                        <details
+                            key={q}
+                            className="group overflow-hidden rounded-xl border border-stone-200 bg-white"
+                        >
+                            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 p-5 font-medium text-stone-900 transition hover:bg-stone-50">
+                                <span>{t(q)}</span>
+                                <ChevronDown
+                                    size={20}
+                                    className="shrink-0 text-brand-600 transition-transform duration-300 group-open:rotate-180"
+                                />
+                            </summary>
+                            <div className="px-5 pb-5 leading-relaxed text-stone-600">{t(a)}</div>
+                        </details>
                     ))}
                 </div>
             </div>

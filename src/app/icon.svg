@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="My Terrace">
+  <rect width="64" height="64" rx="14" fill="#35868f"/>
+  <g transform="translate(32 32)">
+    <g fill="#fbf7f0">
+      <rect x="-17" y="-17" width="34" height="34" rx="3"/>
+      <rect x="-17" y="-17" width="34" height="34" rx="3" transform="rotate(45)"/>
+    </g>
+    <circle r="9" fill="#b76427"/>
+    <circle r="4.2" fill="#fbf7f0"/>
+  </g>
+</svg>

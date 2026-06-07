@@ -1,7 +1,7 @@
 {
     "TopBar": {
-        "viewText": "Tarihi Yarımada Manzarası",
-        "rating": "4.9 Google Puanı"
+        "tagline": "Tarihi Yarımada & Marmara Denizi Manzarası",
+        "reviews": "Google yorumu"
     },
     "Navigation": {
         "home": "Ana Sayfa",
@@ -9,74 +9,165 @@
         "about": "Hakkımızda",
         "blog": "Blog",
         "gallery": "Galeri",
-        "contact": "İletişim"
+        "contact": "İletişim",
+        "reserve": "Rezervasyon"
     },
     "Hero": {
-        "welcome": "My Terrace'a Hoş Geldiniz",
-        "subtitle": "Eşsiz Manzara Eşliğinde Geleneksel Türk Mutfağını Deneyimleyin",
-        "cta": "Menüyü İncele",
-        "book": "Rezervasyon Yap"
+        "eyebrow": "Sultanahmet · İstanbul",
+        "title": "Ayasofya ve Deniz Manzaralı Teras Restoran",
+        "subtitle": "Serpme Türk kahvaltısı, mangal kebaplar, taze deniz ürünleri ve nargile; tarihi yarımadanın eşsiz manzarası eşliğinde.",
+        "ratingLabel": "Google yorumu",
+        "ctaMenu": "Menüyü Keşfet",
+        "ctaReserve": "WhatsApp'tan Rezervasyon"
+    },
+    "Features": {
+        "eyebrow": "✽ Ne Sunuyoruz?",
+        "title": "Misafirlerimizin tekrar tekrar gelmesini sağlayan üç temel deneyim.",
+        "f1_title": "Geleneksel Türk Mutfağı",
+        "f1_desc": "Ustalıkla hazırlanan kebaplar, taze balıklar ve zengin serpme kahvaltı ile hem yerel hem evrensel bir sofra.",
+        "f2_title": "Deniz Manzaralı Teras",
+        "f2_desc": "Sultanahmet'in merkezinde ama gürültüsünden uzakta. Marmara manzaralı terasımızda İstanbul sadece görünmez, hissedilir.",
+        "f3_title": "Otantik Mekan, Gerçek Hizmet",
+        "f3_desc": "Gösterişsiz ama özverili bir anlayışla; her masaya, her misafire, her ana saygı duyan bir servis kültürü."
     },
     "About": {
-        "title": "Hakkımızda",
-        "description": "Sultanahmet'in kalbinde yer alan My Terrace Cafe Restaurant, tarihin lezzetle buluştuğu eşsiz bir yemek deneyimi sunuyor. Sultanahmet Camii ve Ayasofya'nın büyüleyici manzarası eşliğinde otantik Türk yemeklerimizin tadını çıkarın.",
+        "eyebrow": "Hakkımızda",
+        "title": "Sultanahmet'in Kalbinde Bir Manzara Hikâyesi",
+        "lead": "Sultanahmet'in kalbinde yer alan My Terrace Cafe Restaurant, tarihin lezzetle buluştuğu eşsiz bir yemek deneyimi sunuyor.",
+        "p1": "Tarihi yarımadanın en güzel köşelerinden birinde, Ayasofya ve Sultanahmet Camii'ne yürüme mesafesinde, çatı katı terasımız size İstanbul'un en büyüleyici manzaralarından birini sunar: Marmara Denizi, geçen gemiler ve gün batımının altın ışığı.",
+        "p2": "Sabah 08:30'da zengin serpme Türk kahvaltısıyla açılan günümüz; öğlen mangal kebapları ve taze deniz ürünleriyle devam eder, akşam ise nargile ve manzara eşliğinde geç saatlere kadar sürer.",
+        "p3": "Gösterişten uzak, samimi ve misafirperver bir anlayışla; her tabağı özenle hazırlıyor, her misafiri bir dost gibi ağırlıyoruz. Amacımız sadece karnınızı değil, İstanbul'a dair anılarınızı da doyurmak.",
         "features": {
-            "view": "Panoramik Manzara",
-            "food": "Otantik Lezzet",
-            "service": "Kaliteli Hizmet"
-        }
+            "view": { "title": "Panoramik Manzara", "desc": "Ayasofya, Sultanahmet Camii ve Marmara Denizi'nin kesintisiz görüntüsü." },
+            "food": { "title": "Otantik Lezzet", "desc": "Geleneksel tariflerle, taze ve mevsiminde malzemelerle hazırlanan yemekler." },
+            "service": { "title": "Sıcak Hizmet", "desc": "Türkçe, İngilizce, Arapça ve Almanca; her misafire kendi dilinde gülümseyen bir ekip." },
+            "location": { "title": "Merkezi Konum", "desc": "Ayasofya ve Sultanahmet Camii'ne yürüyerek yalnızca birkaç dakika." }
+        },
+        "visitTitle": "Bizi Ziyaret Edin",
+        "visitText": "Her gün 08:30 – 01:00 arası açığız. Manzaralı bir masa için rezervasyon yapmanızı öneririz."
     },
     "Menu": {
-        "title": "Menümüz",
-        "subtitle": "Anadolu'nun lezzetlerini keşfedin"
+        "eyebrow": "Menümüz",
+        "title": "Anadolu'nun Lezzetleri",
+        "subtitle": "Serpme kahvaltıdan mangal kebaplara, taze deniz ürünlerinden mezelere uzanan geniş bir sofra.",
+        "priceNote": "Güncel fiyatlar ve günün önerileri için lütfen bizi arayın ya da WhatsApp'tan yazın.",
+        "reserveCta": "Masa Ayırt"
+    },
+    "Video": {
+        "eyebrow": "My Terrace",
+        "title": "İstanbul'un Kalbinde,",
+        "subtitle": "Gelenekten İlham Alan Sofralar"
+    },
+    "Testimonials": {
+        "eyebrow": "Misafirlerimiz Anlatıyor",
+        "title": "Dünyanın Dört Bir Yanından Misafirler",
+        "subtitle": "Sosyal medyada ve Google'da paylaşılan gerçek deneyimlerden bir seçki."
+    },
+    "Consent": {
+        "text": "Deneyiminizi iyileştirmek ve istatistikler için çerez kullanıyoruz.",
+        "accept": "Kabul Et",
+        "reject": "Reddet"
+    },
+    "Social": {
+        "eyebrow": "Instagram & TikTok",
+        "title": "Sosyal Medyanın Gözdesi Teras",
+        "subtitle": "Sabah serpme Türk kahvaltısı, gün batımı ve teras keyfi — influencer'ların ve misafirlerin en çok paylaştığı anlar.",
+        "follow": "Takip Et"
+    },
+    "Awards": {
+        "eyebrow": "Ödüller & Tanınırlık",
+        "title": "Bağımsız Kuruluşlarca Ödüllendirildik",
+        "subtitle": "Misafirlerimizin gerçek yorumlarına dayanarak uluslararası kuruluşlardan aldığımız ödüller.",
+        "verify": "Doğrula"
+    },
+    "Gallery": {
+        "title": "Galeri",
+        "subtitle": "Manzaramız, terasımız ve sofralarımızdan gerçek kareler.",
+        "filterAll": "Tümü",
+        "filterView": "Manzara",
+        "filterFood": "Lezzetler",
+        "filterInterior": "Mekan"
+    },
+    "Blog": {
+        "latestPosts": "Son Yazılar",
+        "viewAll": "Tüm Yazıları Gör",
+        "title": "Blog",
+        "subtitle": "Sultanahmet, İstanbul ve Türk mutfağı üzerine rehberler ve hikâyeler.",
+        "backToBlog": "Bloga Dön",
+        "readMore": "Devamını Oku",
+        "published": "Yayımlanma"
+    },
+    "FAQ": {
+        "title": "Sıkça Sorulan Sorular",
+        "subtitle": "Ziyaretinizden önce en çok merak edilenler.",
+        "q1": "Rezervasyon yapmadan gelebilir miyim?",
+        "a1": "Evet, rezervasyonsuz misafirlerimizi de memnuniyetle ağırlıyoruz. Ancak özellikle hafta sonları ve akşam saatlerinde yoğunluk yaşanabileceği için, manzaralı bir masa adına rezervasyon öneriyoruz.",
+        "q2": "Menüde vejetaryen ya da glutensiz seçenekler var mı?",
+        "a2": "Evet, menümüzde hem vejetaryen hem de glutensiz seçenekler bulunmaktadır. Özel bir hassasiyetiniz varsa siparişinizde ekibimize belirtmeniz yeterli.",
+        "q3": "Menünüz helal mi?",
+        "a3": "Evet, mutfağımızda helal et ve ürünler kullanıyoruz; Müslüman misafirlerimiz gönül rahatlığıyla yemek yiyebilir.",
+        "q4": "Ayasofya ve Sultanahmet Camii'ne ne kadar uzaktasınız?",
+        "a4": "My Terrace, Ayasofya ve Sultanahmet Camii'ne yürüyerek yaklaşık 8–10 dakika mesafededir; tarihi yarımadanın tam merkezindeyiz.",
+        "q5": "Kahvaltı saatleriniz nedir, serpme kahvaltı var mı?",
+        "a5": "Her sabah 08:30'dan itibaren zengin serpme Türk kahvaltısı sunuyoruz; manzara eşliğinde güne başlamak için ideal.",
+        "q6": "Manzara hangi masalardan daha iyi görünüyor?",
+        "a6": "Teras katımız deniz ve tarihi yarımada manzarasıyla öne çıkar. Manzaralı bir masa tercih ediyorsanız, rezervasyon yaparken belirtmeniz yeterli.",
+        "q7": "Terasta nargile içilebiliyor mu?",
+        "a7": "Evet, terasımızda manzara eşliğinde nargile keyfi yapabilirsiniz.",
+        "q8": "Gün batımı için en iyi saat hangisi?",
+        "a8": "Gün batımından yaklaşık bir saat önce gelmenizi öneririz; terasımız Marmara üzerindeki gün batımı için eşsiz bir nokta.",
+        "q9": "Ailelere ve çocuklu misafirlere uygun musunuz?",
+        "a9": "Evet, sıcak, rahat ve aile dostu bir ortamımız var; çocuklu misafirlerimizi memnuniyetle ağırlıyoruz.",
+        "q10": "Paket servis veya gel-al hizmetiniz var mı?",
+        "a10": "Evet, hem paket servis hem de gel-al hizmetimiz bulunmaktadır. Bizi arayarak ya da WhatsApp'tan yazarak sipariş verebilirsiniz."
     },
     "Contact": {
         "title": "Bize Ulaşın",
+        "subtitle": "Rezervasyon, sorularınız ve özel davetler için buradayız.",
+        "infoTitle": "İletişim Bilgileri",
         "address": "Adres",
         "phone": "Telefon",
         "email": "E-posta",
         "hours": "Çalışma Saatleri",
+        "openDaily": "Her gün 08:30 – 01:00",
+        "directions": "Yol Tarifi Al",
+        "reserveTitle": "Hızlı Rezervasyon",
+        "reserveText": "En hızlı yanıt için WhatsApp'tan yazın; ekibimiz size kısa sürede dönüş yapacaktır.",
         "form": {
             "name": "Adınız",
             "email": "E-postanız",
             "message": "Mesajınız",
-            "send": "Mesaj Gönder"
+            "send": "WhatsApp'tan Gönder",
+            "sending": "Gönderiliyor...",
+            "success": "Teşekkürler! WhatsApp uygulaması açılıyor."
         }
     },
     "Footer": {
-        "rights": "Tüm hakları saklıdır.",
+        "tagline": "Sultanahmet'te Ayasofya ve deniz manzaralı teras restoran. Serpme kahvaltı, kebap, deniz ürünleri ve nargile.",
         "quickLinks": "Hızlı Bağlantılar",
         "contact": "İletişim",
         "hours": "Çalışma Saatleri",
+        "openDaily": "Her gün: 08:30 – 01:00",
+        "followUs": "Bizi Takip Edin",
+        "rights": "Tüm hakları saklıdır.",
         "developedBy": "Geliştiren"
     },
-    "FAQ": {
-        "title": "Sıkça Sorulan Sorular",
-        "q1": "Rezervasyon yapmadan gelebilir miyim?",
-        "a1": "Evet, rezervasyonsuz misafirlerimizi de memnuniyetle ağırlıyoruz. Ancak özellikle hafta sonları ve akşam saatlerinde yoğunluk yaşanabileceği için rezervasyon öneriyoruz.",
-        "q2": "Menüde vejetaryen ya da glutensiz seçenekler var mı?",
-        "a2": "Evet, menümüzde hem vejetaryen hem de glutensiz seçenekler bulunmaktadır. Siparişinizde özel bir hassasiyet varsa ekibimize mutlaka belirtin.",
-        "q3": "Manzara hangi masalardan daha iyi görünüyor?",
-        "a3": "Teras katımız deniz ve tarihi yarımada manzarasıyla öne çıkar. Manzaralı bir masa tercih ediyorsanız, rezervasyon yaparken belirtmeniz yeterli.",
-        "q4": "Paket servis veya gel-al hizmetiniz var mı?",
-        "a4": "Evet, hem paket servis hem de gel-al hizmetimiz bulunmaktadır. Web sitemizden veya bizi arayarak sipariş verebilirsiniz."
-    },
-    "Features": {
-        "subtitle": "✽ Ne Sunuyoruz?",
-        "title": "Ziyaretçilerimizin tekrar tekrar gelmesini sağlayan üç temel deneyim.",
-        "f1_title": "Geleneksel Türk Mutfağı",
-        "f1_desc": "Ustalıkla hazırlanan kebaplar, taze balıklar ve serpme kahvaltı ile hem yerel hem evrensel bir sofra.",
-        "f2_title": "Deniz Manzaralı Teras",
-        "f2_desc": "Sultanahmet'in merkezinde ama gürültüsünden uzakta. Deniz manzaralı terasımızda İstanbul sadece gözükmez, hissedilir.",
-        "f3_title": "Otantik Mekan, Gerçek Hizmet",
-        "f3_desc": "Gösterişsiz ama özverili bir anlayışla; her masaya, her misafire, her ana saygı duyan bir servis kültürü."
-    },
-    "Video": {
-        "title": "İstanbul’un Kalbinde,",
-        "subtitle": "Gelenekten İlham Alan Sofralar"
-    },
-    "Blog": {
-        "latestPosts": "Son Yazılar",
-        "viewAll": "Tüm Yazıları Gör"
+    "Seo": {
+        "faqTitle": "Sıkça Sorulan Sorular",
+        "faqDescription": "My Terrace hakkında sık sorulanlar: helal mi, manzara, kahvaltı saatleri, nargile, Ayasofya'ya uzaklık ve rezervasyon.",
+        "reservationsTitle": "Rezervasyon",
+        "reservationsDescription": "My Terrace'ta manzaralı masa için rezervasyon. WhatsApp veya telefonla hızlı rezervasyon. Her gün 08:30–01:00.",
+        "homeTitle": "Ayasofya Manzaralı Teras Restoran Sultanahmet",
+        "homeDescription": "Sultanahmet'te Ayasofya, Sultanahmet Camii ve Marmara Denizi manzaralı teras restoran. Serpme kahvaltı, kebap, deniz ürünleri ve nargile. Her gün 08:30 – 01:00. Rezervasyon için arayın.",
+        "menuTitle": "Menü — Serpme Kahvaltı, Kebap & Deniz Ürünleri",
+        "menuDescription": "My Terrace menüsü: zengin serpme Türk kahvaltısı, mangal kebaplar, taze deniz ürünleri, mezeler ve tatlılar. Sultanahmet'in kalbinde, manzara eşliğinde.",
+        "aboutTitle": "Hakkımızda — Sultanahmet'in Manzaralı Terası",
+        "aboutDescription": "My Terrace Cafe Restaurant'ın hikâyesi: Sultanahmet'in kalbinde, Ayasofya ve Marmara manzaralı çatı katı terası, otantik Türk lezzetleri ve sıcak hizmet.",
+        "galleryTitle": "Galeri — Manzara, Teras ve Lezzetler",
+        "galleryDescription": "My Terrace'tan gerçek kareler: tarihi yarımada ve Marmara Denizi manzarası, terasımız ve sofralarımız. Sultanahmet'in en güzel manzaralı restoranı.",
+        "blogTitle": "Blog — Sultanahmet & İstanbul Rehberi",
+        "blogDescription": "Sultanahmet'te manzaralı kahvaltı, gezilecek yerler ve Türk mutfağı üzerine rehberler. My Terrace Cafe Restaurant blogu.",
+        "contactTitle": "İletişim & Rezervasyon",
+        "contactDescription": "My Terrace Cafe Restaurant iletişim: Küçük Ayasofya, Fatih/İstanbul. Telefon, WhatsApp, yol tarifi ve rezervasyon. Her gün 08:30 – 01:00."
     }
 }

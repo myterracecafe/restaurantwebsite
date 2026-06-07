@@ -2,127 +2,177 @@
 
 import { useState, useEffect } from 'react';
 import { useTranslations } from 'next-intl';
-import Link from 'next/link';
-import { usePathname, useRouter } from 'next/navigation';
-import { Menu, X, Globe } from 'lucide-react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { Link, usePathname, useRouter } from '@/i18n/navigation';
+import { routing } from '@/i18n/routing';
+import { Menu, X, Globe, ChevronDown, MessageCircle } from 'lucide-react';
+import siteInfo from '@/data/site-info.json';
+import { track, EVENT } from '@/lib/analytics';
 
 export default function Header({ locale }: { locale: string }) {
     const t = useTranslations('Navigation');
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const [langOpen, setLangOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const pathname = usePathname();
     const router = useRouter();
 
+    const isHome = pathname === '/';
+    const transparent = isHome && !scrolled && !isMobileMenuOpen;
+
     useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
-        };
-        window.addEventListener('scroll', handleScroll);
+        const handleScroll = () => setScrolled(window.scrollY > 40);
+        handleScroll();
+        window.addEventListener('scroll', handleScroll, { passive: true });
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
     const switchLocale = (newLocale: string) => {
-        const path = pathname.split('/').slice(2).join('/');
-        router.push(`/${newLocale}/${path}`);
+        track(EVENT.language, { from: locale, to: newLocale });
+        router.replace(pathname, { locale: newLocale });
+        setLangOpen(false);
+        setIsMobileMenuOpen(false);
     };
 
     const navLinks = [
-        { name: t('home'), href: `/${locale}` },
-        { name: t('menu'), href: `/${locale}/menu` },
-        { name: t('about'), href: `/${locale}/about` },
-        { name: t('blog'), href: `/${locale}/blog` },
-        { name: t('gallery'), href: `/${locale}/gallery` },
-        { name: t('contact'), href: `/${locale}/contact` },
+        { name: t('home'), href: '/' },
+        { name: t('menu'), href: '/menu' },
+        { name: t('about'), href: '/about' },
+        { name: t('gallery'), href: '/gallery' },
+        { name: t('blog'), href: '/blog' },
+        { name: t('contact'), href: '/contact' },
     ];
+
+    const linkColor = transparent
+        ? 'text-white/90 hover:text-white'
+        : 'text-stone-700 hover:text-brand-600';
 
     return (
         <header
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled ? 'bg-white/90 backdrop-blur-md shadow-md py-3' : 'bg-white/95 backdrop-blur-sm shadow-sm py-5'}`}
+            className={`transition-all duration-300 ${
+                transparent
+                    ? 'bg-transparent py-4'
+                    : 'bg-cream/95 py-2.5 shadow-sm backdrop-blur-md'
+            }`}
         >
-            <div className="container mx-auto px-4 flex justify-between items-center relative">
-                {/* Logo - Left */}
-                <Link href={`/${locale}`} className="z-50">
-                    <img src="/logo.webp" alt="My Terrace Logo" className="h-12 w-auto object-contain" />
+            <div className="container relative mx-auto flex items-center justify-between px-4">
+                {/* Logo */}
+                <Link href="/" aria-label={siteInfo.name} className="z-50 shrink-0">
+                    <img
+                        src="/logo.webp"
+                        alt={`${siteInfo.name} logo`}
+                        width={160}
+                        height={56}
+                        className={`w-auto object-contain transition-all ${
+                            transparent ? 'h-11 brightness-0 invert' : 'h-12'
+                        }`}
+                    />
                 </Link>
 
-                {/* Desktop Nav - Absolute Center */}
-                <nav className="hidden md:flex items-center gap-8 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+                {/* Desktop nav */}
+                <nav className="absolute left-1/2 top-1/2 hidden -translate-x-1/2 -translate-y-1/2 items-center gap-7 lg:flex">
                     {navLinks.map((link) => (
                         <Link
-                            key={link.name}
+                            key={link.href}
                             href={link.href}
-                            className={`transition-colors font-medium ${scrolled ? 'text-zinc-800 hover:text-amber-600' : 'text-zinc-800 hover:text-amber-600'}`}
+                            className={`text-[15px] font-medium transition-colors ${linkColor}`}
                         >
                             {link.name}
                         </Link>
                     ))}
                 </nav>
 
-                {/* Language Switcher - Right */}
-                <div className="hidden md:block z-50">
-                    <div className="relative group">
+                {/* Right: language switcher + reserve + mobile toggle */}
+                <div className="flex items-center gap-2">
+                    {/* Language switcher (tap to toggle) */}
+                    <div className="relative hidden md:block">
                         <button
-                            className={`flex items-center gap-1 py-2 ${scrolled ? 'text-zinc-800 hover:text-amber-600' : 'text-zinc-800 hover:text-amber-600'}`}
+                            onClick={() => setLangOpen((v) => !v)}
+                            aria-expanded={langOpen}
+                            aria-haspopup="true"
+                            className={`flex items-center gap-1 rounded-full px-2.5 py-1.5 text-sm transition ${linkColor}`}
                         >
-                            <Globe size={20} />
+                            <Globe size={18} />
                             <span className="uppercase">{locale}</span>
+                            <ChevronDown size={14} className={langOpen ? 'rotate-180 transition' : 'transition'} />
                         </button>
-                        <div className="absolute right-0 top-full pt-2 w-24 hidden group-hover:block hover:block">
-                            <div className="bg-white rounded-md shadow-lg overflow-hidden border border-zinc-200">
-                                {['tr', 'en', 'ar', 'de'].map((l) => (
-                                    <button
-                                        key={l}
-                                        onClick={() => switchLocale(l)}
-                                        className={`block w-full text-left px-4 py-2 text-sm hover:bg-zinc-100 ${locale === l ? 'text-amber-600 font-bold' : 'text-zinc-800'
+                        {langOpen && (
+                            <>
+                                <div className="fixed inset-0 z-40" onClick={() => setLangOpen(false)} />
+                                <div className="absolute right-0 top-full z-50 mt-2 w-28 overflow-hidden rounded-xl border border-stone-200 bg-white shadow-xl">
+                                    {routing.locales.map((l) => (
+                                        <button
+                                            key={l}
+                                            onClick={() => switchLocale(l)}
+                                            className={`block w-full px-4 py-2 text-start text-sm transition hover:bg-stone-50 ${
+                                                locale === l ? 'font-bold text-brand-600' : 'text-stone-700'
                                             }`}
-                                    >
-                                        {l.toUpperCase()}
-                                    </button>
-                                ))}
-                            </div>
-                        </div>
+                                        >
+                                            {l.toUpperCase()}
+                                        </button>
+                                    ))}
+                                </div>
+                            </>
+                        )}
                     </div>
-                </div>
 
-                {/* Mobile Menu Button */}
-                <button
-                    className={`md:hidden z-50 ${scrolled ? 'text-zinc-800' : 'text-white'}`}
-                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                >
-                    {isMobileMenuOpen ? <X size={24} className="text-zinc-800" /> : <Menu size={24} />}
-                </button>
+                    {/* Reserve CTA (desktop) */}
+                    <Link
+                        href="/reservations"
+                        onClick={() => track(EVENT.reserve, { method: 'header' })}
+                        className="hidden items-center gap-1.5 rounded-full bg-terra-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-terra-700 lg:inline-flex"
+                    >
+                        <MessageCircle size={16} />
+                        {t('reserve')}
+                    </Link>
+
+                    {/* Mobile toggle */}
+                    <button
+                        className={`z-50 rounded-md p-1.5 lg:hidden ${transparent ? 'text-white' : 'text-stone-800'}`}
+                        onClick={() => setIsMobileMenuOpen((v) => !v)}
+                        aria-label="Menu"
+                        aria-expanded={isMobileMenuOpen}
+                    >
+                        {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+                    </button>
+                </div>
             </div>
 
-            {/* Mobile Menu */}
+            {/* Mobile menu */}
             {isMobileMenuOpen && (
-                <div className="md:hidden absolute top-full left-0 right-0 bg-white border-t border-zinc-200 p-4 shadow-lg">
-                    <div className="flex flex-col space-y-4">
+                <div className="absolute inset-x-0 top-full border-t border-stone-200 bg-cream p-5 shadow-lg lg:hidden">
+                    <nav className="flex flex-col gap-1">
                         {navLinks.map((link) => (
                             <Link
                                 key={link.href}
                                 href={link.href}
-                                className="text-zinc-800 hover:text-amber-600 transition-colors font-medium"
+                                className="rounded-lg px-3 py-2.5 text-base font-medium text-stone-800 transition hover:bg-stone-100 hover:text-brand-600"
                                 onClick={() => setIsMobileMenuOpen(false)}
                             >
                                 {link.name}
                             </Link>
                         ))}
-                        <div className="flex gap-2 pt-4 border-t border-zinc-200">
-                            {['tr', 'en', 'ar', 'de'].map((l) => (
-                                <button
-                                    key={l}
-                                    onClick={() => {
-                                        switchLocale(l);
-                                        setIsMobileMenuOpen(false);
-                                    }}
-                                    className={`uppercase ${locale === l ? 'text-amber-600 font-bold' : 'text-zinc-600'
-                                        }`}
-                                >
-                                    {l}
-                                </button>
-                            ))}
-                        </div>
+                    </nav>
+                    <Link
+                        href="/reservations"
+                        className="mt-3 flex items-center justify-center gap-2 rounded-full bg-terra-600 px-4 py-3 font-semibold text-white"
+                        onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                        <MessageCircle size={18} />
+                        {t('reserve')}
+                    </Link>
+                    <div className="mt-4 flex items-center gap-3 border-t border-stone-200 pt-4">
+                        <Globe size={18} className="text-stone-500" />
+                        {routing.locales.map((l) => (
+                            <button
+                                key={l}
+                                onClick={() => switchLocale(l)}
+                                className={`text-sm uppercase ${
+                                    locale === l ? 'font-bold text-brand-600' : 'text-stone-600'
+                                }`}
+                            >
+                                {l}
+                            </button>
+                        ))}
                     </div>
                 </div>
             )}

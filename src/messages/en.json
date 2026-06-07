@@ -1,82 +1,173 @@
 {
     "TopBar": {
-        "viewText": "Historic Peninsula View",
-        "rating": "4.9 Google Rating"
+        "tagline": "Historic Peninsula & Sea of Marmara View",
+        "reviews": "Google reviews"
     },
     "Navigation": {
         "home": "Home",
         "menu": "Menu",
-        "about": "About Us",
+        "about": "About",
         "blog": "Blog",
         "gallery": "Gallery",
-        "contact": "Contact"
+        "contact": "Contact",
+        "reserve": "Reserve"
     },
     "Hero": {
-        "welcome": "Welcome to My Terrace",
-        "subtitle": "Experience Traditional Turkish Cuisine with a Breathtaking View",
-        "cta": "View Menu",
-        "book": "Book a Table"
+        "eyebrow": "Sultanahmet · Istanbul",
+        "title": "Rooftop Dining With Hagia Sophia & Sea Views",
+        "subtitle": "Turkish breakfast, charcoal kebabs, fresh seafood and hookah — served above the rooftops of Sultanahmet with a panoramic view of the historic peninsula.",
+        "ratingLabel": "Google reviews",
+        "ctaMenu": "Explore the Menu",
+        "ctaReserve": "Reserve on WhatsApp"
+    },
+    "Features": {
+        "eyebrow": "✽ What We Offer",
+        "title": "Three experiences that bring our guests back, again and again.",
+        "f1_title": "Authentic Turkish Cuisine",
+        "f1_desc": "Expertly grilled kebabs, fresh fish and a generous Turkish breakfast — a table that is both local and timeless.",
+        "f2_title": "Sea-View Rooftop Terrace",
+        "f2_desc": "In the heart of Sultanahmet, yet above its bustle. On our terrace, Istanbul is not only seen — it is felt.",
+        "f3_title": "Real Hospitality",
+        "f3_desc": "Unpretentious but devoted: a service culture that respects every table, every guest and every moment."
     },
     "About": {
-        "title": "About Us",
-        "description": "Located in the heart of Sultanahmet, My Terrace Cafe Restaurant offers a unique dining experience where history meets flavor. Enjoy our authentic Turkish dishes while gazing at the mesmerizing view of the Blue Mosque and Hagia Sophia.",
+        "eyebrow": "About Us",
+        "title": "A View Story in the Heart of Sultanahmet",
+        "lead": "In the heart of Istanbul's historic peninsula, My Terrace Cafe Restaurant offers a dining experience where history meets flavour.",
+        "p1": "Set in one of the most beautiful corners of Sultanahmet, a short walk from Hagia Sophia and the Blue Mosque, our rooftop terrace opens onto one of Istanbul's most captivating panoramas: the Sea of Marmara, passing ships and the golden light of sunset.",
+        "p2": "Our day opens at 08:30 with a generous spread of Turkish breakfast, continues through the afternoon with charcoal kebabs and fresh seafood, and stretches late into the evening over hookah and the view.",
+        "p3": "With warm, genuine and unpretentious hospitality, we prepare every plate with care and welcome every guest like a friend. Our goal is to nourish not just your appetite, but your memories of Istanbul.",
         "features": {
-            "view": "Panoramic View",
-            "food": "Authentic Taste",
-            "service": "Quality Service"
-        }
+            "view": { "title": "Panoramic View", "desc": "An uninterrupted view of Hagia Sophia, the Blue Mosque and the Sea of Marmara." },
+            "food": { "title": "Authentic Flavour", "desc": "Dishes prepared with traditional recipes and fresh, seasonal ingredients." },
+            "service": { "title": "Warm Service", "desc": "Turkish, English, Arabic and German — a team that smiles in your language." },
+            "location": { "title": "Central Location", "desc": "Just a few minutes' walk from Hagia Sophia and the Blue Mosque." }
+        },
+        "visitTitle": "Come Visit Us",
+        "visitText": "Open every day from 08:30 to 01:00. We recommend booking ahead for a table with a view."
     },
     "Menu": {
-        "title": "Our Menu",
-        "subtitle": "Discover the flavors of Anatolia"
+        "eyebrow": "Our Menu",
+        "title": "The Flavours of Anatolia",
+        "subtitle": "A generous table — from Turkish breakfast and charcoal kebabs to fresh seafood and meze.",
+        "priceNote": "For current prices and today's specials, please call us or message us on WhatsApp.",
+        "reserveCta": "Reserve a Table"
+    },
+    "Video": {
+        "eyebrow": "My Terrace",
+        "title": "In the Heart of Istanbul,",
+        "subtitle": "A Table Inspired by Tradition"
+    },
+    "Testimonials": {
+        "eyebrow": "Guest Stories",
+        "title": "Guests From Around the World",
+        "subtitle": "A selection of real experiences shared on social media and Google."
+    },
+    "Consent": {
+        "text": "We use cookies to improve your experience and for analytics.",
+        "accept": "Accept",
+        "reject": "Reject"
+    },
+    "Social": {
+        "eyebrow": "Instagram & TikTok",
+        "title": "The Terrace Everyone Posts About",
+        "subtitle": "Turkish breakfast mornings, sunset evenings and the terrace — the moments influencers and guests share most.",
+        "follow": "Follow"
+    },
+    "Awards": {
+        "eyebrow": "Awards & Recognition",
+        "title": "Recognized by Independent Authorities",
+        "subtitle": "Awards earned from international organizations, based on the real reviews of our guests.",
+        "verify": "Verify"
+    },
+    "Gallery": {
+        "title": "Gallery",
+        "subtitle": "Real moments from our view, our terrace and our table.",
+        "filterAll": "All",
+        "filterView": "View",
+        "filterFood": "Food",
+        "filterInterior": "Venue"
+    },
+    "Blog": {
+        "latestPosts": "Latest Posts",
+        "viewAll": "View All Posts",
+        "title": "Blog",
+        "subtitle": "Guides and stories about Sultanahmet, Istanbul and Turkish cuisine.",
+        "backToBlog": "Back to Blog",
+        "readMore": "Read More",
+        "published": "Published"
+    },
+    "FAQ": {
+        "title": "Frequently Asked Questions",
+        "subtitle": "The questions guests ask most before visiting.",
+        "q1": "Can I come without a reservation?",
+        "a1": "Yes, we happily welcome walk-in guests. However, as weekends and evenings can get busy, we recommend booking ahead to secure a table with a view.",
+        "q2": "Are there vegetarian or gluten-free options on the menu?",
+        "a2": "Yes, our menu includes both vegetarian and gluten-free options. If you have any dietary needs, just let our team know when ordering.",
+        "q3": "Is your menu halal?",
+        "a3": "Yes, our kitchen uses halal meat and products, so our Muslim guests can dine with complete peace of mind.",
+        "q4": "How far are you from Hagia Sophia and the Blue Mosque?",
+        "a4": "My Terrace is about an 8–10 minute walk from Hagia Sophia and the Blue Mosque; we are right in the centre of the historic peninsula.",
+        "q5": "What are your breakfast hours, and do you serve a Turkish breakfast spread?",
+        "a5": "We serve a generous Turkish breakfast spread every morning from 08:30 — the perfect way to start the day with a view.",
+        "q6": "Which tables have the best view?",
+        "a6": "Our terrace level stands out with its sea and historic-peninsula view. If you'd like a table with a view, simply mention it when you book.",
+        "q7": "Can I smoke hookah (nargile) on the terrace?",
+        "a7": "Yes, you can enjoy hookah on our terrace alongside the view.",
+        "q8": "What is the best time for sunset?",
+        "a8": "We recommend arriving about an hour before sunset; our terrace is a wonderful spot to watch the sun set over the Sea of Marmara.",
+        "q9": "Are you family- and child-friendly?",
+        "a9": "Yes, we offer a warm, comfortable and family-friendly atmosphere and gladly welcome guests with children.",
+        "q10": "Do you offer takeaway or delivery?",
+        "a10": "Yes, we offer both takeaway and delivery. You can order by calling us or messaging us on WhatsApp."
     },
     "Contact": {
-        "title": "Contact Us",
+        "title": "Get in Touch",
+        "subtitle": "We're here for reservations, questions and special occasions.",
+        "infoTitle": "Contact Details",
         "address": "Address",
         "phone": "Phone",
         "email": "Email",
         "hours": "Opening Hours",
+        "openDaily": "Every day 08:30 – 01:00",
+        "directions": "Get Directions",
+        "reserveTitle": "Quick Reservation",
+        "reserveText": "For the fastest response, message us on WhatsApp and our team will get back to you shortly.",
         "form": {
             "name": "Your Name",
             "email": "Your Email",
-            "message": "Message",
-            "send": "Send Message"
+            "message": "Your Message",
+            "send": "Send via WhatsApp",
+            "sending": "Sending...",
+            "success": "Thank you! Opening WhatsApp."
         }
     },
     "Footer": {
-        "rights": "All rights reserved.",
+        "tagline": "Rooftop terrace restaurant in Sultanahmet with Hagia Sophia and sea views. Turkish breakfast, kebabs, seafood and hookah.",
         "quickLinks": "Quick Links",
         "contact": "Contact",
         "hours": "Opening Hours",
+        "openDaily": "Every day: 08:30 – 01:00",
+        "followUs": "Follow Us",
+        "rights": "All rights reserved.",
         "developedBy": "Developed by"
     },
-    "FAQ": {
-        "title": "Frequently Asked Questions",
-        "q1": "Can I come without a reservation?",
-        "a1": "Yes, we happily welcome walk-in guests. However, we recommend making a reservation as we can get quite busy, especially on weekends and in the evenings.",
-        "q2": "Are there vegetarian or gluten-free options on the menu?",
-        "a2": "Yes, our menu includes both vegetarian and gluten-free options. Please inform our team if you have any specific dietary requirements when ordering.",
-        "q3": "Which tables have the best view?",
-        "a3": "Our terrace floor stands out with its view of the sea and the historical peninsula. If you prefer a table with a view, simply mention it when making your reservation.",
-        "q4": "Do you offer delivery or takeaway?",
-        "a4": "Yes, we offer both delivery and takeaway services. You can order through our website or by calling us directly."
-    },
-    "Features": {
-        "subtitle": "✽ What We Offer?",
-        "title": "Three core experiences that keep our visitors coming back.",
-        "f1_title": "Traditional Turkish Cuisine",
-        "f1_desc": "A table that is both local and universal with expertly prepared kebabs, fresh fish, and mixed breakfast.",
-        "f2_title": "Terrace with Sea View",
-        "f2_desc": "In the center of Sultanahmet but away from its noise. On our terrace with a sea view, Istanbul is not just seen, it is felt.",
-        "f3_title": "Authentic Venue, Real Service",
-        "f3_desc": "With an unpretentious but devoted understanding; a service culture that respects every table, every guest, every moment."
-    },
-    "Video": {
-        "title": "In the Heart of Istanbul,",
-        "subtitle": "Tables Inspired by Tradition"
-    },
-    "Blog": {
-        "latestPosts": "Latest Posts",
-        "viewAll": "View All Posts"
+    "Seo": {
+        "faqTitle": "Frequently Asked Questions",
+        "faqDescription": "Common questions about My Terrace: halal, the view, breakfast hours, hookah, distance to Hagia Sophia and reservations.",
+        "reservationsTitle": "Reservations",
+        "reservationsDescription": "Book a table with a view at My Terrace. Fast reservation via WhatsApp or phone. Open daily 08:30–01:00.",
+        "homeTitle": "Sultanahmet Rooftop Restaurant, Hagia Sophia View",
+        "homeDescription": "Rooftop terrace restaurant in Sultanahmet with views of Hagia Sophia, the Blue Mosque and the Sea of Marmara. Turkish breakfast, kebabs, seafood & hookah. Open daily 08:30 – 01:00. Book a table.",
+        "menuTitle": "Menu — Turkish Breakfast, Kebabs & Seafood",
+        "menuDescription": "My Terrace menu: a generous Turkish breakfast, charcoal kebabs, fresh seafood, meze and desserts — in the heart of Sultanahmet, with a view.",
+        "aboutTitle": "About — Sultanahmet's Rooftop With a View",
+        "aboutDescription": "The story of My Terrace Cafe Restaurant: a rooftop terrace in the heart of Sultanahmet with Hagia Sophia and Marmara views, authentic Turkish flavours and warm service.",
+        "galleryTitle": "Gallery — View, Terrace & Flavours",
+        "galleryDescription": "Real photos from My Terrace: the historic peninsula and Sea of Marmara view, our terrace and our table — Sultanahmet's most scenic restaurant.",
+        "blogTitle": "Blog — Sultanahmet & Istanbul Guide",
+        "blogDescription": "Guides to breakfast with a view in Sultanahmet, things to do nearby and Turkish cuisine. The My Terrace Cafe Restaurant blog.",
+        "contactTitle": "Contact & Reservations",
+        "contactDescription": "Contact My Terrace Cafe Restaurant: Küçük Ayasofya, Fatih/Istanbul. Phone, WhatsApp, directions and reservations. Open daily 08:30 – 01:00."
     }
 }

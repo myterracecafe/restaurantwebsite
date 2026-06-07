@@ -1,14 +1,51 @@
 {
   "name": "My Terrace Cafe Restaurant",
+  "shortName": "My Terrace",
   "description": "Sultanahmet'te Manzaralı Türk Mutfağı",
+  "url": "https://myterracecaferestaurant.com",
+  "neighborhood": "Sultanahmet",
   "address": "Küçük Ayasofya, Şht. Mehmet Paşa Sk. No:9, 34122 Fatih/İstanbul",
+  "addressParts": {
+    "street": "Küçük Ayasofya, Şht. Mehmet Paşa Sk. No:9",
+    "locality": "Fatih",
+    "region": "İstanbul",
+    "postalCode": "34122",
+    "country": "TR"
+  },
   "phone": "+90 535 931 88 17",
+  "phoneE164": "+905359318817",
   "email": "info@myterracecaferestaurant.com",
   "whatsapp": "https://wa.me/905359318817",
+  "geo": { "lat": 41.00429, "lng": 28.97367 },
+  "placeCid": "2553130251954095593",
+  "mapsPlaceUrl": "https://www.google.com/maps?cid=2553130251954095593",
+  "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=41.00429,28.97367",
   "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.766347470634!2d28.97366631541568!3d41.00429097930121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab9be92011c27%3A0x236e6f6f374443e9!2sMy%20Terrace%20Cafe%20Restaurant!5e0!3m2!1sen!2str!4v1633072800000!5m2!1sen!2str",
-  "socials": {
-    "instagram": "https://www.instagram.com/myterracecaferestaurant",
-    "facebook": "https://www.facebook.com/myterracecaferestaurant"
+  "rating": {
+    "value": "4.7",
+    "count": "5600",
+    "url": "https://www.google.com/maps?cid=2553130251954095593"
   },
-  "openingHours": "10:00 - 00:00"
+  "socials": {
+    "instagram": "https://www.instagram.com/myterrace.caferestaurant",
+    "tiktok": "https://www.tiktok.com/@my_terrace.restaurant",
+    "facebook": "https://www.facebook.com/p/Myterrace-cafe-restaurant-100063721831430/",
+    "tripadvisor": "https://www.tripadvisor.com/Restaurant_Review-g293974-d13290395-Reviews-Myterrace_Cafe_Restaurant-Istanbul.html"
+  },
+  "tripadvisorRating": { "value": "4.8", "count": "850" },
+  "instagramFollowers": "65K",
+  "analytics": {
+    "ga4": "G-2PFLBSCRRD",
+    "gtm": "GTM-NSB2VLCP",
+    "yandexMetrica": "109708232"
+  },
+  "verification": {
+    "bing": "5EF0A9CBD7ABD2D674D9BE399420448E",
+    "yandex": "5bd1d5c962ad4556"
+  },
+  "openingHours": "08:30 - 01:00",
+  "openingHoursSpec": { "opens": "08:30", "closes": "01:00" },
+  "priceRange": "$$",
+  "currency": "TRY",
+  "cuisines": ["Turkish", "Mediterranean", "Seafood", "Kebab", "Breakfast"]
 }

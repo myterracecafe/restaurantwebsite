@@ -6,7 +6,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "verify:agents": "node scripts/verify-agent-endpoints.mjs",
+    "indexnow": "node -e \"fetch('https://myterracecaferestaurant.com/api/indexnow').then(r=>r.json()).then(console.log)\""
   },
   "dependencies": {
     "clsx": "^2.1.1",

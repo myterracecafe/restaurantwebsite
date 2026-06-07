@@ -1,22 +1,21 @@
 'use client';
 
 import { Phone } from 'lucide-react';
-import { motion } from 'framer-motion';
 import siteInfo from '@/data/site-info.json';
+import { track, EVENT } from '@/lib/analytics';
 
 export default function FloatingCallButton() {
     return (
-        <motion.a
-            href={`tel:${siteInfo.phone.replace(/\s/g, '')}`}
-            initial={{ scale: 0, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ delay: 1, type: 'spring' }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-amber-600 text-white w-1/2 h-14 rounded-none shadow-none md:w-16 md:h-16 md:rounded-full md:shadow-lg hover:bg-amber-700 transition-colors flex items-center justify-center group"
-            aria-label="Call Us"
+        <a
+            href={`tel:${siteInfo.phoneE164}`}
+            onClick={() => track(EVENT.call, { location: 'floating' })}
+            aria-label={`Call ${siteInfo.phone}`}
+            className="flex flex-1 items-center justify-center gap-2 bg-brand-600 text-white transition hover:bg-brand-700
+                h-14
+                md:h-14 md:w-14 md:flex-none md:rounded-full md:shadow-lg md:shadow-brand-900/30 md:hover:scale-105"
         >
-            <Phone size={24} className="relative z-10" />
-        </motion.a>
+            <Phone size={22} />
+            <span className="text-sm font-semibold md:hidden">{siteInfo.phone}</span>
+        </a>
     );
 }

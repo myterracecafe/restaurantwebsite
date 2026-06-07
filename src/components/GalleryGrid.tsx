@@ -1,92 +1,109 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import { useState } from 'react';
+import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { X } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import galleryData from '@/data/gallery.json';
+import { track, EVENT } from '@/lib/analytics';
 
-const images = [
-    {
-        src: "https://images.unsplash.com/photo-1541432901042-2d8bd64b4a9b?q=80&w=1000&auto=format&fit=crop",
-        alt: "Sultanahmet Square"
-    },
-    {
-        src: "https://images.unsplash.com/photo-1527838832700-5059252407fa?q=80&w=1000&auto=format&fit=crop",
-        alt: "Hagia Sophia"
-    },
-    {
-        src: "https://images.unsplash.com/photo-1641128324972-af3212f0f6bd?q=80&w=1000&auto=format&fit=crop",
-        alt: "Blue Mosque"
-    },
-    {
-        src: "https://images.unsplash.com/photo-1527838832700-5059252407fa?q=80&w=1000&auto=format&fit=crop",
-        alt: "Topkapi Palace"
-    },
-    {
-        src: "https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=1000&auto=format&fit=crop",
-        alt: "Grand Bazaar"
-    },
-    {
-        src: "https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?q=80&w=1000&auto=format&fit=crop",
-        alt: "Galata Tower"
-    },
-    {
-        src: "https://images.unsplash.com/photo-1622587853578-dd1bf9608d26?q=80&w=1000&auto=format&fit=crop",
-        alt: "Bosphorus View"
-    },
-    {
-        src: "https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=1000&auto=format&fit=crop",
-        alt: "Turkish Kebab"
-    },
-    {
-        src: "https://images.unsplash.com/photo-1590846406792-0adc7f938f1d?q=80&w=1000&auto=format&fit=crop",
-        alt: "Restaurant Atmosphere"
-    }
-];
+type Category = 'all' | 'view' | 'food' | 'interior';
 
-export default function GalleryGrid() {
-    const [selectedImage, setSelectedImage] = useState<string | null>(null);
+export default function GalleryGrid({ locale }: { locale: string }) {
+    const t = useTranslations('Gallery');
+    const [filter, setFilter] = useState<Category>('all');
+    const [active, setActive] = useState<number | null>(null);
+
+    const filters: { key: Category; label: string }[] = [
+        { key: 'all', label: t('filterAll') },
+        { key: 'view', label: t('filterView') },
+        { key: 'food', label: t('filterFood') },
+        { key: 'interior', label: t('filterInterior') },
+    ];
+
+    const images = galleryData.filter((img) => filter === 'all' || img.category === filter);
+    const altOf = (img: (typeof galleryData)[number]) =>
+        (img.alt as Record<string, string>)[locale] ?? img.alt.en;
 
     return (
         <>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {images.map((image, index) => (
-                    <motion.div
-                        key={index}
-                        initial={{ opacity: 0, scale: 0.9 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.5, delay: index * 0.1 }}
-                        className="relative aspect-square overflow-hidden rounded-xl cursor-pointer group"
-                        onClick={() => setSelectedImage(image.src)}
+            {/* Filters */}
+            <div className="mb-10 flex flex-wrap justify-center gap-2.5">
+                {filters.map((f) => (
+                    <button
+                        key={f.key}
+                        onClick={() => {
+                            setFilter(f.key);
+                            track(EVENT.galleryFilter, { filter: f.key });
+                        }}
+                        className={`rounded-full px-5 py-2 text-sm font-medium transition ${
+                            filter === f.key
+                                ? 'bg-brand-600 text-white shadow-md'
+                                : 'bg-white text-stone-600 ring-1 ring-stone-200 hover:bg-stone-50'
+                        }`}
                     >
-                        <img
-                            src={image.src}
-                            alt={image.alt}
-                            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                        />
-                        <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
-                            <span className="text-white font-semibold text-lg">{image.alt}</span>
-                        </div>
-                    </motion.div>
+                        {f.label}
+                    </button>
                 ))}
             </div>
 
+            {/* Masonry */}
+            <div className="columns-1 gap-4 sm:columns-2 lg:columns-3">
+                {images.map((img) => {
+                    const realIndex = galleryData.indexOf(img);
+                    return (
+                        <motion.button
+                            key={img.file}
+                            layout
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            onClick={() => {
+                                setActive(realIndex);
+                                track(EVENT.galleryOpen, { file: img.file, category: img.category });
+                            }}
+                            className="group mb-4 block w-full break-inside-avoid overflow-hidden rounded-2xl"
+                        >
+                            <Image
+                                src={img.file}
+                                alt={altOf(img)}
+                                width={img.width}
+                                height={img.height}
+                                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                className="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            />
+                        </motion.button>
+                    );
+                })}
+            </div>
+
             {/* Lightbox */}
-            {selectedImage && (
+            {active !== null && (
                 <div
-                    className="fixed inset-0 z-[100] bg-black/90 flex items-center justify-center p-4"
-                    onClick={() => setSelectedImage(null)}
+                    className="fixed inset-0 z-[100] flex items-center justify-center bg-black/90 p-4"
+                    onClick={() => setActive(null)}
+                    role="dialog"
+                    aria-modal="true"
                 >
                     <button
-                        className="absolute top-4 right-4 text-white hover:text-amber-500 transition-colors"
-                        onClick={() => setSelectedImage(null)}
+                        className="absolute right-4 top-4 text-white transition hover:text-terra-400"
+                        onClick={() => setActive(null)}
+                        aria-label="Close"
                     >
-                        <X size={40} />
+                        <X size={36} />
                     </button>
-                    <img
-                        src={selectedImage}
-                        alt="Gallery Preview"
-                        className="max-w-full max-h-[90vh] object-contain rounded-lg"
-                    />
+                    <figure className="max-h-[90vh] max-w-4xl" onClick={(e) => e.stopPropagation()}>
+                        <Image
+                            src={galleryData[active].file}
+                            alt={altOf(galleryData[active])}
+                            width={galleryData[active].width}
+                            height={galleryData[active].height}
+                            className="h-auto max-h-[82vh] w-auto rounded-lg object-contain"
+                        />
+                        <figcaption className="mt-3 text-center text-sm text-white/80">
+                            {altOf(galleryData[active])}
+                        </figcaption>
+                    </figure>
                 </div>
             )}
         </>

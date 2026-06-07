@@ -1,0 +1,11 @@
+# ai.txt — AI usage policy for My Terrace Cafe Restaurant
+# This is a public marketing site. We welcome AI search engines and assistants
+# to index, ground answers on, and cite this content.
+
+User-Agent: *
+Allow: /
+Disallow: /api/
+
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
+Contact: info@myterracecaferestaurant.com
+Sitemap: https://myterracecaferestaurant.com/sitemap.xml

@@ -2,55 +2,104 @@
 
 import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import Link from 'next/link';
+import { Star, UtensilsCrossed, MessageCircle, ChevronDown } from 'lucide-react';
+import { Link } from '@/i18n/navigation';
+import siteInfo from '@/data/site-info.json';
+import { track, EVENT } from '@/lib/analytics';
 
 export default function Hero({ locale }: { locale: string }) {
     const t = useTranslations('Hero');
 
     return (
-        <section className="relative h-screen flex items-center justify-center overflow-hidden">
-            {/* Background Video with Overlay */}
-            <div className="absolute inset-0 z-0 overflow-hidden">
-                <div className="absolute inset-0 bg-black/60 z-10" />
-                <div className="absolute inset-0 pointer-events-none">
-                    <iframe
-                        src="https://www.youtube.com/embed/URLp5hPu_WE?rel=0&autoplay=1&mute=1&enablejsapi=1&controls=0&loop=1&playlist=URLp5hPu_WE&fs=0&enablejsapi=1"
-                        className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-screen min-w-[177.77vh] -translate-x-1/2 -translate-y-1/2 object-cover"
-                        allow="autoplay; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                    />
-                </div>
+        <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden">
+            {/* Background: poster image (LCP / reduced-motion fallback) + drone video */}
+            <div className="absolute inset-0 z-0">
+                <img
+                    src="/video/hero-poster.jpg"
+                    alt=""
+                    aria-hidden
+                    className="absolute inset-0 h-full w-full object-cover"
+                />
+                <video
+                    className="motion-safe-video absolute inset-0 h-full w-full object-cover"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="none"
+                    poster="/video/hero-poster.jpg"
+                >
+                    <source src="/video/hero.mp4" type="video/mp4" />
+                </video>
+                {/* Legibility gradient */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/70" />
             </div>
 
-            <div className="container mx-auto px-4 relative z-20 text-center text-white">
+            <div className="relative z-10 mx-auto max-w-4xl px-6 text-center text-white">
                 <motion.div
-                    initial={{ opacity: 0, y: 30 }}
+                    initial={{ opacity: 0, y: 24 }}
                     animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.8 }}
+                    transition={{ duration: 0.8, ease: 'easeOut' }}
                 >
-                    <h1 className="text-5xl md:text-7xl font-bold mb-6 text-amber-500">
-                        {t('welcome')}
+                    <p className="mb-5 text-sm font-medium uppercase tracking-[0.25em] text-brand-200">
+                        {t('eyebrow')}
+                    </p>
+                    <h1 className="text-shadow-hero text-4xl font-semibold leading-[1.08] sm:text-5xl md:text-6xl lg:text-7xl">
+                        {t('title')}
                     </h1>
-                    <p className="text-xl md:text-2xl mb-10 max-w-2xl mx-auto text-zinc-200">
+                    <p className="text-shadow-hero mx-auto mt-6 max-w-2xl text-base text-white/90 sm:text-lg md:text-xl">
                         {t('subtitle')}
                     </p>
 
-                    <div className="flex flex-col md:flex-row gap-4 justify-center">
+                    {/* Real, verified Google rating — links to the live reviews */}
+                    <a
+                        href={siteInfo.rating.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={() => track(EVENT.review, { source: 'google', location: 'hero' })}
+                        className="mt-7 inline-flex items-center gap-2 rounded-full bg-white/15 px-4 py-2 text-sm backdrop-blur-sm ring-1 ring-white/25 transition hover:bg-white/25"
+                    >
+                        <span className="flex items-center gap-0.5 text-amber-300">
+                            {[0, 1, 2, 3, 4].map((i) => (
+                                <Star key={i} size={15} className="fill-amber-300 text-amber-300" />
+                            ))}
+                        </span>
+                        <span className="font-semibold">{siteInfo.rating.value}</span>
+                        <span className="text-white/80">
+                            · {siteInfo.rating.count}+ {t('ratingLabel')}
+                        </span>
+                    </a>
+
+                    <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
                         <Link
-                            href={`/${locale}/menu`}
-                            className="px-8 py-3 bg-amber-600 hover:bg-amber-700 text-white rounded-full font-semibold transition-colors text-lg"
+                            href="/menu"
+                            className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-terra-600 px-8 py-3.5 text-base font-semibold text-white shadow-lg shadow-terra-900/30 transition hover:bg-terra-700 sm:w-auto"
                         >
-                            {t('cta')}
+                            <UtensilsCrossed size={19} />
+                            {t('ctaMenu')}
                         </Link>
-                        <Link
-                            href={`/${locale}/contact`}
-                            className="px-8 py-3 bg-transparent border-2 border-white hover:bg-white hover:text-black text-white rounded-full font-semibold transition-colors text-lg"
+                        <a
+                            href={siteInfo.whatsapp}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex w-full items-center justify-center gap-2 rounded-full border-2 border-white/70 bg-white/5 px-8 py-3.5 text-base font-semibold text-white backdrop-blur-sm transition hover:bg-white hover:text-stone-900 sm:w-auto"
                         >
-                            {t('book')}
-                        </Link>
+                            <MessageCircle size={19} />
+                            {t('ctaReserve')}
+                        </a>
                     </div>
                 </motion.div>
             </div>
+
+            {/* Scroll cue */}
+            <motion.div
+                aria-hidden
+                className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-white/70"
+                animate={{ y: [0, 8, 0] }}
+                transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
+            >
+                <ChevronDown size={28} />
+            </motion.div>
         </section>
     );
 }

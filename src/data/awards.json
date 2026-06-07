@@ -1,0 +1,59 @@
+[
+  {
+    "id": "tripadvisor",
+    "icon": "trophy",
+    "org": "Tripadvisor",
+    "year": "2025",
+    "url": "https://www.tripadvisor.com/Restaurant_Review-g293974-d13290395-Reviews-Myterrace_Cafe_Restaurant-Istanbul.html",
+    "award": {
+      "tr": "Travelers' Choice 2025",
+      "en": "Travelers' Choice 2025",
+      "ar": "اختيار المسافرين 2025",
+      "de": "Travelers' Choice 2025"
+    },
+    "detail": {
+      "tr": "4.8/5 · İstanbul'da 13.309 restoran arasında #239",
+      "en": "4.8/5 · #239 of 13,309 restaurants in Istanbul",
+      "ar": "4.8/5 · المرتبة 239 من بين 13,309 مطعمًا في إسطنبول",
+      "de": "4,8/5 · Platz 239 von 13.309 Restaurants in Istanbul"
+    }
+  },
+  {
+    "id": "restaurantguru",
+    "icon": "award",
+    "org": "Restaurant Guru",
+    "year": "2023–2026",
+    "url": "https://restaurantguru.com/Mina-Teras-and-Bar-Istanbul",
+    "award": {
+      "tr": "Türkiye'nin En İyi 100 Kafesi",
+      "en": "Top 100 Best Cafés in Turkey",
+      "ar": "أفضل 100 مقهى في تركيا",
+      "de": "Top 100 der besten Cafés der Türkei"
+    },
+    "detail": {
+      "tr": "2023'ten beri her yıl ödüllü · Mükemmel manzara, servis ve atmosfer",
+      "en": "Award-winning every year since 2023 · Excellent view, service & atmosphere",
+      "ar": "حائز على جوائز سنوية منذ 2023 · إطلالة وخدمة وأجواء ممتازة",
+      "de": "Jedes Jahr ausgezeichnet seit 2023 · Hervorragende Aussicht, Service & Atmosphäre"
+    }
+  },
+  {
+    "id": "gte",
+    "icon": "medal",
+    "org": "Global Tourism Excellence Awards",
+    "year": "2025",
+    "url": "https://gteawards.com/",
+    "award": {
+      "tr": "Kazanan 2025 · 2026 Adayı",
+      "en": "Winner 2025 · 2026 Nominee",
+      "ar": "الفائز 2025 · مرشّح 2026",
+      "de": "Gewinner 2025 · Nominiert 2026"
+    },
+    "detail": {
+      "tr": "Doğrulanmış misafir yorumlarına dayalı küresel turizm ödülü",
+      "en": "A global tourism award based on verified guest reviews",
+      "ar": "جائزة سياحية عالمية تستند إلى تقييمات الضيوف الموثّقة",
+      "de": "Ein globaler Tourismuspreis auf Basis verifizierter Gästebewertungen"
+    }
+  }
+]

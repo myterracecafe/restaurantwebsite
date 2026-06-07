@@ -1,0 +1,122 @@
+[
+  {
+    "file": "/images/gallery/terrace-view-marmara-sea.webp",
+    "category": "view",
+    "width": 1600,
+    "height": 1200,
+    "alt": {
+      "tr": "My Terrace terasından Marmara Denizi ve tarihi cami manzarası, Sultanahmet",
+      "en": "Sea of Marmara and historic mosque view from the My Terrace rooftop in Sultanahmet",
+      "ar": "إطلالة على بحر مرمرة ومسجد تاريخي من تراس My Terrace في السلطان أحمد",
+      "de": "Blick auf das Marmarameer und eine historische Moschee von der My-Terrace-Dachterrasse in Sultanahmet"
+    }
+  },
+  {
+    "file": "/images/gallery/terrace-booth-sea-view.webp",
+    "category": "view",
+    "width": 1600,
+    "height": 1200,
+    "alt": {
+      "tr": "Geleneksel kilim minderli teras köşesi, deniz ve cami manzarası",
+      "en": "Terrace booth with traditional kilim seating and a sea and mosque view",
+      "ar": "ركن التراس بمقاعد كليم تقليدية وإطلالة على البحر والمسجد",
+      "de": "Terrassenecke mit traditioneller Kelim-Bestuhlung und Blick auf Meer und Moschee"
+    }
+  },
+  {
+    "file": "/images/gallery/terrace-guests-bamboo-roof.webp",
+    "category": "view",
+    "width": 1600,
+    "height": 1200,
+    "alt": {
+      "tr": "Hasır tavanlı terasta deniz manzarası eşliğinde yemek yiyen misafirler",
+      "en": "Guests dining under the bamboo-roofed terrace with a sea view",
+      "ar": "ضيوف يتناولون الطعام تحت تراس بسقف من الخيزران مع إطلالة على البحر",
+      "de": "Gäste beim Essen unter der bambusgedeckten Terrasse mit Meerblick"
+    }
+  },
+  {
+    "file": "/images/gallery/terrace-dining-sunset.webp",
+    "category": "view",
+    "width": 1200,
+    "height": 1600,
+    "alt": {
+      "tr": "Gün batımında çatı katı terasında akşam yemeği",
+      "en": "Evening dining on the rooftop terrace at sunset",
+      "ar": "عشاء على تراس السطح وقت غروب الشمس",
+      "de": "Abendessen auf der Dachterrasse bei Sonnenuntergang"
+    }
+  },
+  {
+    "file": "/images/gallery/terrace-geraniums-mosque-view.webp",
+    "category": "view",
+    "width": 1200,
+    "height": 1600,
+    "alt": {
+      "tr": "Terastan sardunyalar arasında cami kubbesi ve minare manzarası",
+      "en": "Mosque dome and minaret view framed by geraniums from the terrace",
+      "ar": "إطلالة على قبة المسجد والمئذنة بين أزهار إبرة الراعي من التراس",
+      "de": "Blick auf Moscheekuppel und Minarett, umrahmt von Geranien auf der Terrasse"
+    }
+  },
+  {
+    "file": "/images/gallery/mixed-grill-feast.webp",
+    "category": "food",
+    "width": 1290,
+    "height": 960,
+    "alt": {
+      "tr": "Kebap, mezeler ve ekmekle zengin Türk karışık ızgara sofrası",
+      "en": "Turkish mixed grill feast with kebabs, mezes and bread",
+      "ar": "وليمة مشاوي تركية مشكّلة مع الكباب والمقبلات والخبز",
+      "de": "Türkisches Mixed-Grill-Festmahl mit Kebab, Mezze und Brot"
+    }
+  },
+  {
+    "file": "/images/gallery/grilled-lamb-chops.webp",
+    "category": "food",
+    "width": 1217,
+    "height": 1600,
+    "alt": {
+      "tr": "Pirinç ve salatayla ahşap tahtada ızgara kuzu pirzola",
+      "en": "Grilled lamb chops with rice and salad on a wooden board",
+      "ar": "ريش لحم الضأن المشوية مع الأرز والسلطة على لوح خشبي",
+      "de": "Gegrillte Lammkoteletts mit Reis und Salat auf einem Holzbrett"
+    }
+  },
+  {
+    "file": "/images/gallery/seafood-clay-pot.webp",
+    "category": "food",
+    "width": 1238,
+    "height": 1600,
+    "alt": {
+      "tr": "Karides ve deniz ürünleriyle güveçte sıcak deniz mahsulü",
+      "en": "Sizzling seafood casserole with shrimp served in a clay pot",
+      "ar": "طاجن مأكولات بحرية ساخن مع الجمبري يُقدّم في وعاء فخاري",
+      "de": "Brutzelnder Meeresfrüchte-Eintopf mit Garnelen im Tontopf"
+    }
+  },
+  {
+    "file": "/images/gallery/kebab-copper-plate.webp",
+    "category": "food",
+    "width": 1290,
+    "height": 1566,
+    "alt": {
+      "tr": "Közlenmiş biberlerle bakır tabakta servis edilen kebap",
+      "en": "Kebab served on a copper plate with grilled peppers",
+      "ar": "كباب يُقدّم في طبق نحاسي مع الفلفل المشوي",
+      "de": "Kebab auf einem Kupferteller mit gegrillten Paprika serviert"
+    }
+  },
+  {
+    "file": "/images/gallery/my-terrace-building.webp",
+    "category": "interior",
+    "width": 1080,
+    "height": 1350,
+    "alt": {
+      "tr": "Sultanahmet'teki mavi My Terrace Cafe & Restaurant binası",
+      "en": "The blue My Terrace Cafe & Restaurant building in Sultanahmet",
+      "ar": "مبنى My Terrace Cafe & Restaurant الأزرق في السلطان أحمد",
+      "de": "Das blaue Gebäude des My Terrace Cafe & Restaurant in Sultanahmet"
+    }
+  }
+]

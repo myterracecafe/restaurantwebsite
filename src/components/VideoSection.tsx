@@ -7,30 +7,42 @@ export default function VideoSection() {
     const t = useTranslations('Video');
 
     return (
-        <section className="relative h-[60vh] md:h-[80vh] w-full overflow-hidden">
-            {/* Video Background */}
-            <div className="absolute inset-0 w-full h-full">
-                <iframe
-                    loading="lazy"
-                    className="absolute top-1/2 left-1/2 w-[177.77vh] h-[100vh] min-w-[100vw] min-h-[56.25vw] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-                    frameBorder="0"
-                    aria-label="Background video"
-                    src="https://www.youtube.com/embed/0GDNsUiq538?rel=0&autoplay=1&mute=1&enablejsapi=1&controls=0&loop=1&playlist=0GDNsUiq538&fs=0"
-                    allow="autoplay; encrypted-media"
-                ></iframe>
-            </div>
+        <section className="relative h-[60vh] w-full overflow-hidden md:h-[80vh]">
+            <img
+                src="/video/terrace-poster.jpg"
+                alt=""
+                aria-hidden
+                className="absolute inset-0 h-full w-full object-cover"
+            />
+            <video
+                className="motion-safe-video absolute inset-0 h-full w-full object-cover"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="none"
+                poster="/video/terrace-poster.jpg"
+            >
+                <source src="/video/terrace.mp4" type="video/mp4" />
+            </video>
 
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-black/40 z-10" />
+            <div className="absolute inset-0 bg-black/45" />
 
-            {/* Content */}
-            <div className="relative z-20 h-full flex flex-col items-center justify-center text-center px-4">
+            <div className="relative z-10 flex h-full flex-col items-center justify-center px-4 text-center">
+                <motion.p
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-brand-200"
+                >
+                    {t('eyebrow')}
+                </motion.p>
                 <motion.h2
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8 }}
-                    className="text-4xl md:text-6xl font-bold text-white mb-4 drop-shadow-lg"
+                    className="text-shadow-hero text-3xl font-semibold text-white drop-shadow-lg md:text-5xl"
                 >
                     {t('title')}
                 </motion.h2>
@@ -38,8 +50,8 @@ export default function VideoSection() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.2 }}
-                    className="text-2xl md:text-4xl text-white/90 font-light tracking-wide drop-shadow-md"
+                    transition={{ duration: 0.8, delay: 0.15 }}
+                    className="text-shadow-hero mt-2 text-xl font-light tracking-wide text-white/90 md:text-3xl"
                 >
                     {t('subtitle')}
                 </motion.p>
@@ -47,4 +59,3 @@ export default function VideoSection() {
         </section>
     );
 }
-

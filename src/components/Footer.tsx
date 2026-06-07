@@ -1,94 +1,134 @@
 'use client';
 
-import Link from 'next/link';
+import { Link } from '@/i18n/navigation';
 import { useTranslations } from 'next-intl';
-import { Facebook, Instagram, MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { Facebook, Instagram, MapPin, Phone, Mail, Clock, Star } from 'lucide-react';
 import siteInfo from '@/data/site-info.json';
+import DirectionsButton from './DirectionsButton';
+import { track, EVENT } from '@/lib/analytics';
+
+function TikTokIcon({ size = 22 }: { size?: number }) {
+    return (
+        <svg viewBox="0 0 24 24" width={size} height={size} fill="currentColor" aria-hidden>
+            <path d="M16.6 5.82a4.28 4.28 0 0 1-1.05-2.82h-3.2v12.86a2.59 2.59 0 1 1-2.59-2.59c.27 0 .53.04.78.12v-3.3a5.9 5.9 0 0 0-.78-.05A5.86 5.86 0 1 0 15.4 15.9V9.42a7.5 7.5 0 0 0 4.36 1.4V7.6a4.28 4.28 0 0 1-3.16-1.78Z" />
+        </svg>
+    );
+}
 
 export default function Footer({ locale }: { locale: string }) {
     const t = useTranslations('Footer');
     const nav = useTranslations('Navigation');
+    const fq = useTranslations('FAQ');
+
+    const links = [
+        { href: '/', label: nav('home') },
+        { href: '/menu', label: nav('menu') },
+        { href: '/about', label: nav('about') },
+        { href: '/gallery', label: nav('gallery') },
+        { href: '/blog', label: nav('blog') },
+        { href: '/faq', label: fq('title') },
+        { href: '/reservations', label: nav('reserve') },
+        { href: '/contact', label: nav('contact') },
+    ];
 
     return (
-        <footer className="bg-zinc-50 text-zinc-600 py-12 border-t border-zinc-200">
-            <div className="container mx-auto px-4">
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <footer className="border-t border-stone-200 bg-sand text-stone-600">
+            <div className="container mx-auto px-4 py-14">
+                <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
                     {/* Brand */}
                     <div>
-                        <h3 className="text-2xl font-bold text-zinc-900 mb-4">My Terrace</h3>
-                        <p className="text-zinc-500 mb-4">
-                            {siteInfo.description}
-                        </p>
-                        <div className="flex gap-4">
-                            <a href={siteInfo.socials.instagram} target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-amber-600 transition-colors">
-                                <Instagram size={24} />
+                        <img src="/logo.webp" alt={`${siteInfo.name} logo`} width={170} height={60} className="mb-4 h-12 w-auto object-contain" />
+                        <p className="mb-4 max-w-xs text-sm leading-relaxed text-stone-500">{t('tagline')}</p>
+                        <a
+                            href={siteInfo.rating.url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="mb-4 inline-flex items-center gap-1.5 text-sm font-medium text-stone-700 transition hover:text-brand-600"
+                        >
+                            <Star size={15} className="fill-amber-400 text-amber-400" />
+                            <span className="font-bold">{siteInfo.rating.value}</span>
+                            <span className="text-stone-500">· {siteInfo.rating.count}+ Google</span>
+                        </a>
+                        <div className="flex gap-3">
+                            <a href={siteInfo.socials.instagram} onClick={() => track(EVENT.social, { network: 'instagram' })} target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="text-stone-400 transition hover:text-brand-600">
+                                <Instagram size={22} />
                             </a>
-                            <a href={siteInfo.socials.facebook} target="_blank" rel="noopener noreferrer" className="text-zinc-400 hover:text-amber-600 transition-colors">
-                                <Facebook size={24} />
+                            <a href={siteInfo.socials.tiktok} onClick={() => track(EVENT.social, { network: 'tiktok' })} target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="text-stone-400 transition hover:text-brand-600">
+                                <TikTokIcon size={22} />
+                            </a>
+                            <a href={siteInfo.socials.facebook} onClick={() => track(EVENT.social, { network: 'facebook' })} target="_blank" rel="noopener noreferrer" aria-label="Facebook" className="text-stone-400 transition hover:text-brand-600">
+                                <Facebook size={22} />
                             </a>
                         </div>
                     </div>
 
-                    {/* Quick Links */}
+                    {/* Quick links */}
                     <div>
-                        <h4 className="text-lg font-semibold text-zinc-900 mb-4">{t('quickLinks')}</h4>
-                        <ul className="space-y-2">
-                            <li><Link href={`/${locale}`} className="hover:text-amber-600 transition-colors">{nav('home')}</Link></li>
-                            <li><Link href={`/${locale}/menu`} className="hover:text-amber-600 transition-colors">{nav('menu')}</Link></li>
-                            <li><Link href={`/${locale}/about`} className="hover:text-amber-600 transition-colors">{nav('about')}</Link></li>
-                            <li><Link href={`/${locale}/blog`} className="hover:text-amber-600 transition-colors">{nav('blog')}</Link></li>
-                            <li><Link href={`/${locale}/gallery`} className="hover:text-amber-600 transition-colors">{nav('gallery')}</Link></li>
-                            <li><Link href={`/${locale}/contact`} className="hover:text-amber-600 transition-colors">{nav('contact')}</Link></li>
+                        <h4 className="mb-4 text-base font-semibold text-stone-900">{t('quickLinks')}</h4>
+                        <ul className="space-y-2.5 text-sm">
+                            {links.map((l) => (
+                                <li key={l.href}>
+                                    <Link href={l.href} className="transition hover:text-brand-600">{l.label}</Link>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
                     {/* Contact */}
                     <div>
-                        <h4 className="text-lg font-semibold text-zinc-900 mb-4">{t('contact')}</h4>
-                        <div className="space-y-2 text-zinc-500">
-                            <div className="flex items-start gap-2">
-                                <MapPin size={20} className="shrink-0 mt-1 text-amber-600" />
-                                <p>{siteInfo.address}</p>
-                            </div>
-                            <div className="flex items-center gap-2">
-                                <Phone size={20} className="text-amber-600" />
-                                <a href={`tel:${siteInfo.phone}`} className="hover:text-amber-600 transition-colors">
-                                    {siteInfo.phone}
+                        <h4 className="mb-4 text-base font-semibold text-stone-900">{t('contact')}</h4>
+                        <ul className="space-y-3 text-sm">
+                            <li className="flex items-start gap-2.5">
+                                <MapPin size={18} className="mt-0.5 shrink-0 text-brand-600" />
+                                <a href={siteInfo.mapsPlaceUrl} target="_blank" rel="noopener noreferrer" className="transition hover:text-brand-600">
+                                    {siteInfo.address}
                                 </a>
-                            </div>
-
-                        </div>
+                            </li>
+                            <li className="flex items-center gap-2.5">
+                                <Phone size={18} className="shrink-0 text-brand-600" />
+                                <a href={`tel:${siteInfo.phoneE164}`} className="transition hover:text-brand-600">{siteInfo.phone}</a>
+                            </li>
+                            <li className="flex items-center gap-2.5">
+                                <Mail size={18} className="shrink-0 text-brand-600" />
+                                <a href={`mailto:${siteInfo.email}`} className="transition hover:text-brand-600">{siteInfo.email}</a>
+                            </li>
+                            <li className="pt-1">
+                                <DirectionsButton />
+                            </li>
+                        </ul>
                     </div>
 
                     {/* Hours */}
                     <div>
-                        <h4 className="text-lg font-semibold text-zinc-900 mb-4">{t('hours')}</h4>
-                        <div className="flex items-center gap-2 text-zinc-500">
-                            <Clock size={20} className="text-amber-600" />
-                            <p>Everyday: {siteInfo.openingHours}</p>
+                        <h4 className="mb-4 text-base font-semibold text-stone-900">{t('hours')}</h4>
+                        <div className="flex items-center gap-2.5 text-sm">
+                            <Clock size={18} className="shrink-0 text-brand-600" />
+                            <p>{t('openDaily')}</p>
                         </div>
                     </div>
                 </div>
 
-                <div className="border-t border-zinc-200 pt-8 text-center text-zinc-400 text-sm">
-                    <p>&copy; {new Date().getFullYear()} {siteInfo.name}. {t('rights')}</p>
-                    <div className="mt-2 flex justify-center items-center gap-2">
-                        <a
-                            href="https://paksoft.com.tr"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center group"
-                        >
-                            <span className="text-zinc-500 mr-2 group-hover:text-amber-600 transition-colors">{t('developedBy')}</span>
-                            <div className="flex items-center text-amber-600 group-hover:text-amber-500 transition-colors">
-                                {/* Custom Crescent Icon */}
-                                <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5 -rotate-12">
-                                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10c1.85 0 3.58-.5 5.08-1.38-.7.13-1.42.21-2.16.21-5.52 0-10-4.48-10-10S9.42 2.83 14.92 2.83c.74 0 1.46.08 2.16.21C15.58 2.5 13.85 2 12 2z" />
-                                </svg>
-                                <span className="font-bold text-lg tracking-wide">PakSoft</span>
-                            </div>
+                <div className="mt-12 border-t border-stone-200 pt-8 text-center text-sm text-stone-400">
+                    <p>
+                        &copy; {new Date().getFullYear()} {siteInfo.name}. {t('rights')}
+                    </p>
+                    <div className="mt-2 flex items-center justify-center gap-2">
+                        <a href="https://paksoft.com.tr" target="_blank" rel="noopener noreferrer" className="group flex items-center">
+                            <span className="mr-2 text-stone-500 transition group-hover:text-brand-600">{t('developedBy')}</span>
+                            <span className="font-bold tracking-wide text-brand-600 transition group-hover:text-brand-500">PakSoft</span>
                         </a>
                     </div>
+                    <p className="mt-3 text-xs text-stone-400">
+                        Powered by{' '}
+                        <a
+                            href="https://www.yazilimkocu.com/"
+                            target="_blank"
+                            rel="noopener"
+                            className="font-semibold text-brand-600 transition hover:text-brand-700"
+                        >
+                            Yazılım Koçu
+                        </a>
+                    </p>
                 </div>
             </div>
         </footer>
