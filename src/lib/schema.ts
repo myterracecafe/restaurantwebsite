@@ -9,7 +9,7 @@ const SAME_AS = [
     siteInfo.socials.facebook,
     siteInfo.socials.tripadvisor,
     'https://restaurantguru.com/Mina-Teras-and-Bar-Istanbul',
-    'https://www.google.com/maps?cid=2553130251954095593',
+    siteInfo.mapsPlaceUrl,
 ];
 
 const AWARD_TEXTS = awardsData.map((a) => `${a.org} — ${a.award.en} (${a.year})`);

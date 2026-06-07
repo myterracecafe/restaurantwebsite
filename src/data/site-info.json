@@ -18,13 +18,13 @@
   "whatsapp": "https://wa.me/905359318817",
   "geo": { "lat": 41.00429, "lng": 28.97367 },
   "placeCid": "2553130251954095593",
-  "mapsPlaceUrl": "https://www.google.com/maps?cid=2553130251954095593",
+  "mapsPlaceUrl": "https://www.google.com/maps/search/My+Terrace+Cafe+Restaurant/@41.00429,28.97367,17z",
   "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=41.00429,28.97367",
-  "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.766347470634!2d28.97366631541568!3d41.00429097930121!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14cab9be92011c27%3A0x236e6f6f374443e9!2sMy%20Terrace%20Cafe%20Restaurant!5e0!3m2!1sen!2str!4v1633072800000!5m2!1sen!2str",
+  "mapUrl": "https://maps.google.com/maps?q=41.00429,28.97367(My+Terrace+Cafe+Restaurant)&z=17&output=embed",
   "rating": {
     "value": "4.7",
     "count": "5600",
-    "url": "https://www.google.com/maps?cid=2553130251954095593"
+    "url": "https://www.google.com/maps/search/My+Terrace+Cafe+Restaurant/@41.00429,28.97367,17z"
   },
   "socials": {
     "instagram": "https://www.instagram.com/myterrace.caferestaurant",
