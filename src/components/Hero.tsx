@@ -6,45 +6,45 @@ import { Star, UtensilsCrossed, MessageCircle, ChevronDown } from 'lucide-react'
 import { Link } from '@/i18n/navigation';
 import siteInfo from '@/data/site-info.json';
 import { track, EVENT } from '@/lib/analytics';
+import LazyVideo from './LazyVideo';
 
 export default function Hero({ locale }: { locale: string }) {
     const t = useTranslations('Hero');
 
     return (
         <section className="relative flex min-h-[100svh] items-center justify-center overflow-hidden">
-            {/* Background: poster image (LCP / reduced-motion fallback) + drone video */}
+            {/* Background: poster image (LCP) + lazy drone video */}
             <div className="absolute inset-0 z-0">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                     src="/video/hero-poster.jpg"
                     alt=""
                     aria-hidden
+                    fetchPriority="high"
+                    loading="eager"
+                    decoding="async"
                     className="absolute inset-0 h-full w-full object-cover"
                 />
-                <video
-                    className="motion-safe-video absolute inset-0 h-full w-full object-cover"
-                    autoPlay
-                    muted
-                    loop
-                    playsInline
-                    preload="none"
+                <LazyVideo
+                    src="/video/hero.mp4"
                     poster="/video/hero-poster.jpg"
-                >
-                    <source src="/video/hero.mp4" type="video/mp4" />
-                </video>
+                    rootMargin="0px"
+                    className="motion-safe-video absolute inset-0 h-full w-full object-cover"
+                />
                 {/* Legibility gradient */}
                 <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/70" />
             </div>
 
-            <div className="relative z-10 mx-auto max-w-4xl px-6 text-center text-white">
+            <div className="relative z-10 mx-auto max-w-4xl px-6 pb-16 text-center text-white sm:pb-0">
                 <motion.div
                     initial={{ opacity: 0, y: 24 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, ease: 'easeOut' }}
                 >
-                    <p className="mb-5 text-sm font-medium uppercase tracking-[0.25em] text-brand-200">
+                    <p className="mb-5 text-sm font-medium uppercase tracking-[0.25em] text-white/90">
                         {t('eyebrow')}
                     </p>
-                    <h1 className="text-shadow-hero text-4xl font-semibold leading-[1.08] sm:text-5xl md:text-6xl lg:text-7xl">
+                    <h1 className="text-shadow-hero text-3xl font-semibold leading-[1.1] sm:text-5xl md:text-6xl lg:text-7xl">
                         {t('title')}
                     </h1>
                     <p className="text-shadow-hero mx-auto mt-6 max-w-2xl text-base text-white/90 sm:text-lg md:text-xl">
@@ -94,7 +94,7 @@ export default function Hero({ locale }: { locale: string }) {
             {/* Scroll cue */}
             <motion.div
                 aria-hidden
-                className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 text-white/70"
+                className="scroll-cue absolute bottom-20 left-1/2 z-10 -translate-x-1/2 text-white/70 sm:bottom-6"
                 animate={{ y: [0, 8, 0] }}
                 transition={{ duration: 1.8, repeat: Infinity, ease: 'easeInOut' }}
             >

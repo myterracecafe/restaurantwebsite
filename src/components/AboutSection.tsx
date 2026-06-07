@@ -27,7 +27,7 @@ export default function AboutSection() {
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
                     >
-                        <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-terra-600">
+                        <p className="mb-3 text-sm font-medium uppercase tracking-[0.2em] text-terra-700">
                             {t('eyebrow')}
                         </p>
                         <h2 className="text-3xl font-semibold text-stone-900 md:text-4xl">{t('title')}</h2>

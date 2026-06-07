@@ -26,6 +26,17 @@ export default function Header({ locale }: { locale: string }) {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
 
+    useEffect(() => {
+        const onKey = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') {
+                setIsMobileMenuOpen(false);
+                setLangOpen(false);
+            }
+        };
+        document.addEventListener('keydown', onKey);
+        return () => document.removeEventListener('keydown', onKey);
+    }, []);
+
     const switchLocale = (newLocale: string) => {
         track(EVENT.language, { from: locale, to: newLocale });
         router.replace(pathname, { locale: newLocale });
@@ -98,19 +109,20 @@ export default function Header({ locale }: { locale: string }) {
                         {langOpen && (
                             <>
                                 <div className="fixed inset-0 z-40" onClick={() => setLangOpen(false)} />
-                                <div className="absolute right-0 top-full z-50 mt-2 w-28 overflow-hidden rounded-xl border border-stone-200 bg-white shadow-xl">
+                                <ul role="listbox" aria-label="Language" className="absolute end-0 top-full z-50 mt-2 w-28 overflow-hidden rounded-xl border border-stone-200 bg-white shadow-xl">
                                     {routing.locales.map((l) => (
-                                        <button
-                                            key={l}
-                                            onClick={() => switchLocale(l)}
-                                            className={`block w-full px-4 py-2 text-start text-sm transition hover:bg-stone-50 ${
-                                                locale === l ? 'font-bold text-brand-600' : 'text-stone-700'
-                                            }`}
-                                        >
-                                            {l.toUpperCase()}
-                                        </button>
+                                        <li key={l} role="option" aria-selected={locale === l}>
+                                            <button
+                                                onClick={() => switchLocale(l)}
+                                                className={`block w-full px-4 py-2 text-start text-sm transition hover:bg-stone-50 ${
+                                                    locale === l ? 'font-bold text-brand-600' : 'text-stone-700'
+                                                }`}
+                                            >
+                                                {l.toUpperCase()}
+                                            </button>
+                                        </li>
                                     ))}
-                                </div>
+                                </ul>
                             </>
                         )}
                     </div>
@@ -119,7 +131,7 @@ export default function Header({ locale }: { locale: string }) {
                     <Link
                         href="/reservations"
                         onClick={() => track(EVENT.reserve, { method: 'header' })}
-                        className="hidden items-center gap-1.5 rounded-full bg-terra-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-terra-700 lg:inline-flex"
+                        className="hidden items-center gap-1.5 rounded-full bg-terra-600 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-terra-700 md:inline-flex"
                     >
                         <MessageCircle size={16} />
                         {t('reserve')}

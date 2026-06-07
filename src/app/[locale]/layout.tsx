@@ -27,9 +27,10 @@ const inter = Inter({
 });
 const cormorant = Cormorant_Garamond({
     subsets: ['latin', 'latin-ext'],
-    weight: ['400', '500', '600', '700'],
+    weight: ['600', '700'],
     variable: '--font-cormorant',
     display: 'swap',
+    preload: true,
 });
 const cairo = Cairo({
     subsets: ['arabic', 'latin'],
@@ -115,6 +116,10 @@ export default async function LocaleLayout({
 
     const messages = await getMessages();
     const dir = isRtl(locale) ? 'rtl' : 'ltr';
+    const skipText: Record<string, string> = {
+        tr: 'İçeriğe geç', en: 'Skip to content', ar: 'تخطّ إلى المحتوى',
+        de: 'Zum Inhalt springen', ru: 'Перейти к содержимому', es: 'Saltar al contenido', fr: 'Aller au contenu',
+    };
 
     return (
         <html
@@ -136,13 +141,14 @@ export default async function LocaleLayout({
                 <JsonLd data={siteGraph(locale)} />
                 <NextIntlClientProvider messages={messages}>
                     <GoogleAnalytics />
-                    <YandexMetrica />
+                    <YandexMetrica locale={locale} />
                     <AnalyticsBoot />
+                    <a href="#main-content" className="skip-link">{skipText[locale] ?? skipText.en}</a>
                     <div className="fixed inset-x-0 top-0 z-50">
                         <TopBar />
                         <Header locale={locale} />
                     </div>
-                    <main className="min-h-screen">{children}</main>
+                    <main id="main-content" className="min-h-screen">{children}</main>
                     <Footer locale={locale} />
                     <FloatingButtons />
                     <CookieConsent />

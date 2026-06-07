@@ -20,7 +20,7 @@ export default function TestimonialsSection() {
                     <p className="mx-auto mt-4 max-w-2xl text-white/70">{t('subtitle')}</p>
                 </div>
 
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
                     {testimonials.map((item, index) => (
                         <motion.figure
                             key={index}

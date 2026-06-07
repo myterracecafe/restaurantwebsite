@@ -21,7 +21,7 @@ export default async function BlogPage({ params }: { params: Promise<{ locale: s
     const blogPosts = getBlogPosts(locale);
 
     return (
-        <div className="min-h-screen bg-cream pb-20 pt-32">
+        <div className="min-h-screen bg-cream pb-20 pt-28">
             <JsonLd
                 data={[
                     webPageSchema({ locale, href: '/blog', name: seo('blogTitle'), description: seo('blogDescription') }),

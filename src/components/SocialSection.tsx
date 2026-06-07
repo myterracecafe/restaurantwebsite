@@ -42,7 +42,7 @@ export default function SocialSection() {
         <section className="bg-white py-20">
             <div className="container mx-auto px-4">
                 <div className="mb-12 text-center">
-                    <p className="mb-2 text-sm font-medium uppercase tracking-[0.2em] text-terra-600">{t('eyebrow')}</p>
+                    <p className="mb-2 text-sm font-medium uppercase tracking-[0.2em] text-terra-700">{t('eyebrow')}</p>
                     <h2 className="text-3xl font-semibold text-stone-900 md:text-4xl">{t('title')}</h2>
                     <p className="mx-auto mt-4 max-w-2xl text-stone-600">{t('subtitle')}</p>
                 </div>

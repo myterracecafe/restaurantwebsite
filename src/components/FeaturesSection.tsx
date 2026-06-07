@@ -23,7 +23,7 @@ export default function FeaturesSection() {
                         viewport={{ once: true }}
                         className="inline-block"
                     >
-                        <span className="mb-2 block text-sm font-medium uppercase tracking-[0.2em] text-terra-600">
+                        <span className="mb-2 block text-sm font-medium uppercase tracking-[0.2em] text-terra-700">
                             {t('eyebrow')}
                         </span>
                         <h2 className="mx-auto max-w-2xl text-2xl font-semibold text-stone-900 md:text-4xl">

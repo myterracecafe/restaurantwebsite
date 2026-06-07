@@ -19,7 +19,7 @@ export default async function GalleryPage({ params }: { params: Promise<{ locale
     const seo = await getTranslations({ locale, namespace: 'Seo' });
 
     return (
-        <div className="min-h-screen bg-cream pb-20 pt-32">
+        <div className="min-h-screen bg-cream pb-20 pt-28">
             <JsonLd
                 data={[
                     webPageSchema({ locale, href: '/gallery', name: seo('galleryTitle'), description: seo('galleryDescription') }),

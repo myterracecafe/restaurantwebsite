@@ -51,7 +51,7 @@ export default async function Home({ params }: { params: Promise<{ locale: strin
             <section className="bg-white py-20">
                 <div className="container mx-auto px-4">
                     <div className="mb-12 text-center">
-                        <p className="mb-2 text-sm font-medium uppercase tracking-[0.2em] text-terra-600">
+                        <p className="mb-2 text-sm font-medium uppercase tracking-[0.2em] text-terra-700">
                             {t('latestPosts')}
                         </p>
                         <h2 className="text-3xl font-semibold text-stone-900 md:text-4xl">{t('subtitle')}</h2>

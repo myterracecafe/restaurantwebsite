@@ -16,14 +16,14 @@ export default function AwardsSection({ locale }: { locale: string }) {
         <section className="bg-cream py-20">
             <div className="container mx-auto px-4">
                 <div className="mb-12 text-center">
-                    <p className="mb-2 text-sm font-medium uppercase tracking-[0.2em] text-terra-600">
+                    <p className="mb-2 text-sm font-medium uppercase tracking-[0.2em] text-terra-700">
                         {t('eyebrow')}
                     </p>
                     <h2 className="text-3xl font-semibold text-stone-900 md:text-4xl">{t('title')}</h2>
                     <p className="mx-auto mt-4 max-w-2xl text-stone-600">{t('subtitle')}</p>
                 </div>
 
-                <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+                <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
                     {awards.map((item, index) => {
                         const Icon = ICONS[item.icon as keyof typeof ICONS] ?? Award;
                         return (

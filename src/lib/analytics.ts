@@ -1,10 +1,12 @@
 'use client';
 
+import { getStoredUTM } from './utm';
+
 /**
  * Lightweight event layer. Pushes to GTM dataLayer AND GA4 gtag (so both work),
- * and is a safe no-op until a tag is installed. Captures the standard conversion
- * events PLUS custom intent/AI signals GA does not collect by default
- * (map provider chosen, language switch, dish search, AI referral, agent usage).
+ * and is a safe no-op until a tag is installed. Every event auto-carries the
+ * stored UTM/click-id attribution. Includes standard conversion events PLUS
+ * custom intent/AI signals GA does not collect by default.
  */
 type Params = Record<string, unknown>;
 
@@ -15,6 +17,8 @@ interface W extends Window {
 
 export const EVENT = {
     reserve: 'reserve_click',
+    reservationSubmitted: 'reservation_submitted',
+    reservationFormStarted: 'reservation_form_started',
     whatsapp: 'whatsapp_click',
     call: 'call_click',
     directions: 'directions_click',
@@ -32,9 +36,10 @@ export const EVENT = {
 export function track(event: string, params: Params = {}) {
     if (typeof window === 'undefined') return;
     const w = window as W;
+    const enriched = { ...getStoredUTM(), ...params };
     w.dataLayer = w.dataLayer || [];
-    w.dataLayer.push({ event, ...params });
-    if (typeof w.gtag === 'function') w.gtag('event', event, params);
+    w.dataLayer.push({ event, ...enriched });
+    if (typeof w.gtag === 'function') w.gtag('event', event, enriched);
 }
 
 /** Detect arrivals from AI assistants (custom signal most setups miss). */

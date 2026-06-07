@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import { X } from 'lucide-react';
@@ -14,6 +14,21 @@ export default function GalleryGrid({ locale }: { locale: string }) {
     const t = useTranslations('Gallery');
     const [filter, setFilter] = useState<Category>('all');
     const [active, setActive] = useState<number | null>(null);
+    const closeRef = useRef<HTMLButtonElement>(null);
+
+    useEffect(() => {
+        if (active === null) return;
+        const onKey = (e: KeyboardEvent) => {
+            if (e.key === 'Escape') setActive(null);
+        };
+        document.addEventListener('keydown', onKey);
+        document.body.style.overflow = 'hidden';
+        closeRef.current?.focus();
+        return () => {
+            document.removeEventListener('keydown', onKey);
+            document.body.style.overflow = '';
+        };
+    }, [active]);
 
     const filters: { key: Category; label: string }[] = [
         { key: 'all', label: t('filterAll') },
@@ -86,11 +101,12 @@ export default function GalleryGrid({ locale }: { locale: string }) {
                     aria-modal="true"
                 >
                     <button
-                        className="absolute right-4 top-4 text-white transition hover:text-terra-400"
+                        ref={closeRef}
+                        className="absolute right-4 top-4 rounded-full p-2 text-white transition hover:text-terra-400"
                         onClick={() => setActive(null)}
                         aria-label="Close"
                     >
-                        <X size={36} />
+                        <X size={32} />
                     </button>
                     <figure className="max-h-[90vh] max-w-4xl" onClick={(e) => e.stopPropagation()}>
                         <Image

@@ -5,7 +5,7 @@ import { pageMetadata } from '@/lib/seo';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import siteInfo from '@/data/site-info.json';
 import DirectionsButton from '@/components/DirectionsButton';
-import { MessageCircle, Phone, Clock } from 'lucide-react';
+import { MessageCircle, Phone, Clock, Star } from 'lucide-react';
 import type { Metadata } from 'next';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
@@ -57,6 +57,14 @@ export default async function ReservationsPage({ params }: { params: Promise<{ l
                     <p className="mt-5 inline-flex items-center gap-2 text-sm text-white/70">
                         <Clock size={15} /> {c('openDaily')}
                     </p>
+                    <div className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-sm text-white/85">
+                        <span className="inline-flex items-center gap-1.5">
+                            <Star size={14} className="fill-amber-300 text-amber-300" />
+                            {siteInfo.rating.value} · {siteInfo.rating.count}+ Google
+                        </span>
+                        <span className="text-white/40">•</span>
+                        <span>Tripadvisor {siteInfo.tripadvisorRating.value} · Travelers' Choice 2025</span>
+                    </div>
                 </div>
             </section>
 
