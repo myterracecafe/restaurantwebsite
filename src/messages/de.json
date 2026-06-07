@@ -134,6 +134,9 @@
         "reserveTitle": "Schnelle Reservierung",
         "reserveText": "Für die schnellste Antwort schreiben Sie uns über WhatsApp – unser Team meldet sich umgehend bei Ihnen.",
         "form": {
+            "date": "Datum",
+            "time": "Uhrzeit",
+            "guests": "Personen",
             "name": "Ihr Name",
             "email": "Ihre E-Mail",
             "message": "Ihre Nachricht",

@@ -10,12 +10,23 @@ import { track, EVENT } from '@/lib/analytics';
 export default function ContactSection() {
     const t = useTranslations('Contact');
     const [sent, setSent] = useState(false);
+    const today = new Date().toISOString().split('T')[0];
 
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        const form = new FormData(e.currentTarget);
-        const text = `Name: ${form.get('name')}%0AEmail: ${form.get('email')}%0AMessage: ${form.get('message')}`;
-        track(EVENT.reserve, { method: 'form' });
+        const f = new FormData(e.currentTarget);
+        const get = (k: string) => String(f.get(k) || '').trim();
+        const lines = [
+            `*${t('reserveTitle')} — ${siteInfo.name}*`,
+            `${t('form.name')}: ${get('name')}`,
+            `${t('form.email')}: ${get('email')}`,
+            `${t('form.date')}: ${get('date')}`,
+            `${t('form.time')}: ${get('time')}`,
+            `${t('form.guests')}: ${get('guests')}`,
+            `${t('form.message')}: ${get('message')}`,
+        ];
+        const text = encodeURIComponent(lines.join('\n'));
+        track(EVENT.reserve, { method: 'form', date: get('date'), guests: get('guests') });
         track(EVENT.whatsapp, { location: 'contact_form' });
         window.open(`${siteInfo.whatsapp}?text=${text}`, '_blank');
         setSent(true);
@@ -96,9 +107,26 @@ export default function ContactSection() {
                                         className="w-full rounded-xl border border-stone-200 bg-cream px-4 py-3 text-stone-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20"
                                         placeholder={t('form.email')} />
                                 </div>
+                                <div className="grid grid-cols-2 gap-3">
+                                    <div>
+                                        <label htmlFor="c-date" className="mb-1.5 block text-sm font-medium text-stone-700">{t('form.date')}</label>
+                                        <input id="c-date" name="date" type="date" required min={today}
+                                            className="w-full rounded-xl border border-stone-200 bg-cream px-4 py-3 text-stone-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20" />
+                                    </div>
+                                    <div>
+                                        <label htmlFor="c-time" className="mb-1.5 block text-sm font-medium text-stone-700">{t('form.time')}</label>
+                                        <input id="c-time" name="time" type="time" required defaultValue="19:00" step={1800}
+                                            className="w-full rounded-xl border border-stone-200 bg-cream px-4 py-3 text-stone-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <label htmlFor="c-guests" className="mb-1.5 block text-sm font-medium text-stone-700">{t('form.guests')}</label>
+                                    <input id="c-guests" name="guests" type="number" min={1} max={50} defaultValue={2} required
+                                        className="w-full rounded-xl border border-stone-200 bg-cream px-4 py-3 text-stone-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20" />
+                                </div>
                                 <div>
                                     <label htmlFor="c-msg" className="mb-1.5 block text-sm font-medium text-stone-700">{t('form.message')}</label>
-                                    <textarea id="c-msg" name="message" rows={4} required
+                                    <textarea id="c-msg" name="message" rows={3}
                                         className="w-full rounded-xl border border-stone-200 bg-cream px-4 py-3 text-stone-900 outline-none transition focus:border-brand-500 focus:ring-2 focus:ring-brand-500/20"
                                         placeholder={t('form.message')} />
                                 </div>

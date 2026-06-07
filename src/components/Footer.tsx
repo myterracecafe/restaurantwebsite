@@ -33,12 +33,12 @@ export default function Footer({ locale }: { locale: string }) {
 
     return (
         <footer className="border-t border-stone-200 bg-sand text-stone-600">
-            <div className="container mx-auto px-4 py-14">
-                <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
+            <div className="container mx-auto px-4 py-9">
+                <div className="grid grid-cols-2 gap-x-8 gap-y-8 md:grid-cols-4">
                     {/* Brand */}
-                    <div>
-                        <img src="/logo.webp" alt={`${siteInfo.name} logo`} width={170} height={60} className="mb-4 h-12 w-auto object-contain" />
-                        <p className="mb-4 max-w-xs text-sm leading-relaxed text-stone-500">{t('tagline')}</p>
+                    <div className="col-span-2 md:col-span-1">
+                        <img src="/logo.webp" alt={`${siteInfo.name} logo`} width={150} height={52} className="mb-3 h-10 w-auto object-contain" />
+                        <p className="mb-3 max-w-xs text-sm leading-relaxed text-stone-500">{t('tagline')}</p>
                         <a
                             href={siteInfo.rating.url}
                             target="_blank"
@@ -64,7 +64,7 @@ export default function Footer({ locale }: { locale: string }) {
 
                     {/* Quick links */}
                     <div>
-                        <h4 className="mb-4 text-base font-semibold text-stone-900">{t('quickLinks')}</h4>
+                        <h4 className="mb-3 text-base font-semibold text-stone-900">{t('quickLinks')}</h4>
                         <ul className="space-y-2.5 text-sm">
                             {links.map((l) => (
                                 <li key={l.href}>
@@ -76,7 +76,7 @@ export default function Footer({ locale }: { locale: string }) {
 
                     {/* Contact */}
                     <div>
-                        <h4 className="mb-4 text-base font-semibold text-stone-900">{t('contact')}</h4>
+                        <h4 className="mb-3 text-base font-semibold text-stone-900">{t('contact')}</h4>
                         <ul className="space-y-3 text-sm">
                             <li className="flex items-start gap-2.5">
                                 <MapPin size={18} className="mt-0.5 shrink-0 text-brand-600" />
@@ -100,7 +100,7 @@ export default function Footer({ locale }: { locale: string }) {
 
                     {/* Hours */}
                     <div>
-                        <h4 className="mb-4 text-base font-semibold text-stone-900">{t('hours')}</h4>
+                        <h4 className="mb-3 text-base font-semibold text-stone-900">{t('hours')}</h4>
                         <div className="flex items-center gap-2.5 text-sm">
                             <Clock size={18} className="shrink-0 text-brand-600" />
                             <p>{t('openDaily')}</p>
@@ -108,17 +108,11 @@ export default function Footer({ locale }: { locale: string }) {
                     </div>
                 </div>
 
-                <div className="mt-12 border-t border-stone-200 pt-8 text-center text-sm text-stone-400">
+                <div className="mt-8 flex flex-col items-center justify-between gap-2 border-t border-stone-200 pt-5 text-center text-xs text-stone-400 sm:flex-row sm:text-left">
                     <p>
                         &copy; {new Date().getFullYear()} {siteInfo.name}. {t('rights')}
                     </p>
-                    <div className="mt-2 flex items-center justify-center gap-2">
-                        <a href="https://paksoft.com.tr" target="_blank" rel="noopener noreferrer" className="group flex items-center">
-                            <span className="mr-2 text-stone-500 transition group-hover:text-brand-600">{t('developedBy')}</span>
-                            <span className="font-bold tracking-wide text-brand-600 transition group-hover:text-brand-500">PakSoft</span>
-                        </a>
-                    </div>
-                    <p className="mt-3 text-xs text-stone-400">
+                    <p>
                         Powered by{' '}
                         <a
                             href="https://www.yazilimkocu.com/"

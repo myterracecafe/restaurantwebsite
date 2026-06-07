@@ -134,6 +134,9 @@
         "reserveTitle": "Reserva Rápida",
         "reserveText": "Para una respuesta más rápida, escríbenos por WhatsApp y nuestro equipo te contestará en breve.",
         "form": {
+            "date": "Fecha",
+            "time": "Hora",
+            "guests": "Personas",
             "name": "Tu Nombre",
             "email": "Tu Correo Electrónico",
             "message": "Tu Mensaje",

@@ -134,6 +134,9 @@
         "reserveTitle": "Hızlı Rezervasyon",
         "reserveText": "En hızlı yanıt için WhatsApp'tan yazın; ekibimiz size kısa sürede dönüş yapacaktır.",
         "form": {
+            "date": "Tarih",
+            "time": "Saat",
+            "guests": "Kişi sayısı",
             "name": "Adınız",
             "email": "E-postanız",
             "message": "Mesajınız",
