@@ -15,7 +15,7 @@
     "Hero": {
         "eyebrow": "Sultanahmet · Istanbul",
         "title": "Restaurant Rooftop Vue Sainte-Sophie & Mer",
-        "subtitle": "Petit-déjeuner turc, kebabs au charbon de bois, fruits de mer frais et narguilé — servis sur les toits de Sultanahmet, face au panorama de la péninsule historique.",
+        "subtitle": "Petit-déjeuner turc, kebabs au charbon de bois, fruits de mer frais — servis sur les toits de Sultanahmet, face au panorama de la péninsule historique.",
         "ratingLabel": "avis Google",
         "ctaMenu": "Découvrir le menu",
         "ctaReserve": "Réserver sur WhatsApp"
@@ -35,7 +35,7 @@
         "title": "Une histoire de panorama au cœur de Sultanahmet",
         "lead": "Au cœur de la péninsule historique d'Istanbul, My Terrace Cafe Restaurant offre une expérience culinaire où l'histoire rencontre la saveur.",
         "p1": "Niché dans l'un des plus beaux coins de Sultanahmet, à quelques pas de Sainte-Sophie et de la Mosquée Bleue, notre terrasse rooftop s'ouvre sur l'un des panoramas les plus envoutants d'Istanbul : la mer de Marmara, les bateaux qui passent et la lumière dorée du coucher de soleil.",
-        "p2": "Notre journée s'ouvre à 08:30 avec un généreux petit-déjeuner turc, se poursuit l'après-midi avec des kebabs au charbon de bois et des fruits de mer frais, et se prolonge tard le soir autour du narguilé et de la vue.",
+        "p2": "Notre journée s'ouvre à 08:30 avec un généreux petit-déjeuner turc, se poursuit l'après-midi avec des kebabs au charbon de bois et des fruits de mer frais, et se prolonge tard le soir en profitant de la vue.",
         "p3": "Avec une hospitalité chaleureuse, sincère et sans prétention, nous préparons chaque assiette avec soin et accueillons chaque hôte comme un ami. Notre objectif est de nourrir non seulement votre appétit, mais aussi vos souvenirs d'Istanbul.",
         "features": {
             "view": { "title": "Vue panoramique", "desc": "Une vue dégagée sur Sainte-Sophie, la Mosquée Bleue et la mer de Marmara." },
@@ -112,8 +112,8 @@
         "a5": "Nous servons un généreux petit-déjeuner turc tous les matins à partir de 08:30 — la façon idéale de commencer la journée avec vue.",
         "q6": "Quelles tables offrent la plus belle vue ?",
         "a6": "Notre niveau terrasse se distingue par sa vue sur la mer et la péninsule historique. Si vous souhaitez une table avec vue, il vous suffit de le préciser lors de votre réservation.",
-        "q7": "Peut-on fumer le narguilé (nargile) sur la terrasse ?",
-        "a7": "Oui, vous pouvez profiter du narguilé sur notre terrasse, face à la vue.",
+        "q7": "Puis-je réserver pour des groupes ou des occasions spéciales ?",
+        "a7": "Oui, notre rooftop est idéal pour le coucher du soleil et les célébrations ; réservations de groupe faciles via WhatsApp.",
         "q8": "Quel est le meilleur moment pour le coucher de soleil ?",
         "a8": "Nous vous recommandons d'arriver environ une heure avant le coucher de soleil ; notre terrasse est un endroit magnifique pour admirer le soleil se coucher sur la mer de Marmara.",
         "q9": "Êtes-vous adaptés aux familles et aux enfants ?",
@@ -146,7 +146,7 @@
         }
     },
     "Footer": {
-        "tagline": "Restaurant avec terrasse rooftop à Sultanahmet, vue sur Sainte-Sophie et la mer. Petit-déjeuner turc, kebabs, fruits de mer et narguilé.",
+        "tagline": "Restaurant avec terrasse rooftop à Sultanahmet, vue sur Sainte-Sophie et la mer. Petit-déjeuner turc, kebabs, fruits de mer.",
         "quickLinks": "Liens rapides",
         "contact": "Contact",
         "hours": "Horaires d'ouverture",
@@ -157,11 +157,11 @@
     },
     "Seo": {
         "faqTitle": "Questions fréquentes",
-        "faqDescription": "Questions fréquentes sur My Terrace : halal, vue, horaires du petit-déjeuner, narguilé, distance jusqu'à Sainte-Sophie et réservations.",
+        "faqDescription": "Questions fréquentes sur My Terrace : halal, vue, horaires du petit-déjeuner, distance jusqu'à Sainte-Sophie et réservations.",
         "reservationsTitle": "Réservations",
         "reservationsDescription": "Réservez une table avec vue à My Terrace. Réservation rapide via WhatsApp ou téléphone. Ouvert tous les jours 08:30–01:00.",
         "homeTitle": "Restaurant Rooftop Sultanahmet, Vue Sainte-Sophie",
-        "homeDescription": "Restaurant avec terrasse rooftop à Sultanahmet, vue sur Sainte-Sophie, la Mosquée Bleue et la mer de Marmara. Petit-déjeuner turc, kebabs, fruits de mer et narguilé. Ouvert 08:30 – 01:00.",
+        "homeDescription": "Restaurant avec terrasse rooftop à Sultanahmet, vue sur Sainte-Sophie, la Mosquée Bleue et la mer de Marmara. Petit-déjeuner turc, kebabs, fruits de mer. Ouvert 08:30 – 01:00.",
         "menuTitle": "Menu — Petit-déjeuner Turc, Kebabs & Fruits de Mer",
         "menuDescription": "Le menu de My Terrace : un généreux petit-déjeuner turc, des kebabs au charbon de bois, des fruits de mer frais, des mezzés et des desserts — au cœur de Sultanahmet, avec vue.",
         "aboutTitle": "À propos — Le Rooftop avec Vue de Sultanahmet",

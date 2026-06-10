@@ -10,7 +10,7 @@ export function GET() {
 
     const body = `# My Terrace Cafe Restaurant
 
-> ${b.description}. A casual all-day rooftop terrace in Sultanahmet, Istanbul with panoramic views of Hagia Sophia, the Blue Mosque and the Sea of Marmara — Turkish breakfast, charcoal kebabs, fresh seafood, meze and hookah, at honest prices.
+> ${b.description}. A casual all-day rooftop terrace in Sultanahmet, Istanbul with panoramic views of Hagia Sophia, the Blue Mosque and the Sea of Marmara — Turkish breakfast, charcoal kebabs, fresh seafood, meze, at honest prices.
 
 ## Key facts
 - Location: ${b.address} (coordinates ${b.geo.lat}, ${b.geo.lng}); ~8–10 min walk from Hagia Sophia and the Blue Mosque

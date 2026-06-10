@@ -88,7 +88,7 @@ const TOOLS: Tool[] = [
     },
     {
         name: 'get_faq',
-        description: 'Get frequently asked questions and answers (halal, view, breakfast, hookah, family-friendly, distance to landmarks...).',
+        description: 'Get frequently asked questions and answers (halal, view, breakfast, family-friendly, distance to landmarks...).',
         inputSchema: { type: 'object', properties: { ...langProp } },
         run: (a) => faq(a.lang as string),
     },

@@ -15,7 +15,7 @@
     "Hero": {
         "eyebrow": "Sultanahmet · Estambul",
         "title": "Restaurante con Terraza, Vistas a Santa Sofía y al Mar",
-        "subtitle": "Desayuno turco, kebabs a la brasa, mariscos frescos y narguile, servidos sobre los tejados de Sultanahmet con una vista panorámica de la península histórica.",
+        "subtitle": "Desayuno turco, kebabs a la brasa, mariscos frescos, servidos sobre los tejados de Sultanahmet con una vista panorámica de la península histórica.",
         "ratingLabel": "reseñas de Google",
         "ctaMenu": "Descubre el Menú",
         "ctaReserve": "Reserva por WhatsApp"
@@ -35,7 +35,7 @@
         "title": "Una Historia con Vistas en el Corazón de Sultanahmet",
         "lead": "En el corazón de la península histórica de Estambul, My Terrace Cafe Restaurant ofrece una experiencia gastronómica donde la historia se encuentra con el sabor.",
         "p1": "Situada en uno de los rincones más bellos de Sultanahmet, a pocos pasos de Santa Sofía y la Mezquita Azul, nuestra terraza en la azotea se abre a uno de los panoramas más cautivadores de Estambul: el mar de Mármara, los barcos que pasan y la luz dorada del atardecer.",
-        "p2": "Nuestro día comienza a las 08:30 con un generoso despliegue de desayuno turco, continúa por la tarde con kebabs a la brasa y mariscos frescos, y se prolonga hasta bien entrada la noche entre narguile y la vista.",
+        "p2": "Nuestro día comienza a las 08:30 con un generoso despliegue de desayuno turco, continúa por la tarde con kebabs a la brasa y mariscos frescos, y se prolonga hasta bien entrada la noche disfrutando de la vista.",
         "p3": "Con una hospitalidad cálida, genuina y sin pretensiones, preparamos cada plato con cuidado y recibimos a cada cliente como a un amigo. Nuestro objetivo es alimentar no solo tu apetito, sino también tus recuerdos de Estambul.",
         "features": {
             "view": { "title": "Vista Panorámica", "desc": "Una vista sin obstáculos de Santa Sofía, la Mezquita Azul y el mar de Mármara." },
@@ -112,8 +112,8 @@
         "a5": "Servimos un generoso desayuno turco completo cada mañana a partir de las 08:30: la manera perfecta de empezar el día con vistas.",
         "q6": "¿Qué mesas tienen las mejores vistas?",
         "a6": "Nuestro nivel de terraza destaca por su vista al mar y a la península histórica. Si deseas una mesa con vistas, solo tienes que mencionarlo al reservar.",
-        "q7": "¿Se puede fumar narguile en la terraza?",
-        "a7": "Sí, puedes disfrutar del narguile en nuestra terraza junto a la vista.",
+        "q7": "¿Puedo reservar para grupos u ocasiones especiales?",
+        "a7": "Sí, nuestra azotea es ideal para atardeceres y celebraciones; gestiona las reservas de grupo fácilmente por WhatsApp.",
         "q8": "¿Cuál es el mejor momento para el atardecer?",
         "a8": "Recomendamos llegar alrededor de una hora antes del atardecer; nuestra terraza es un lugar maravilloso para ver ponerse el sol sobre el mar de Mármara.",
         "q9": "¿Son un sitio apto para familias y niños?",
@@ -146,7 +146,7 @@
         }
     },
     "Footer": {
-        "tagline": "Restaurante con terraza en la azotea en Sultanahmet con vistas a Santa Sofía y al mar. Desayuno turco, kebabs, mariscos y narguile.",
+        "tagline": "Restaurante con terraza en la azotea en Sultanahmet con vistas a Santa Sofía y al mar. Desayuno turco, kebabs, mariscos.",
         "quickLinks": "Enlaces Rápidos",
         "contact": "Contacto",
         "hours": "Horario de Apertura",
@@ -157,11 +157,11 @@
     },
     "Seo": {
         "faqTitle": "Preguntas Frecuentes",
-        "faqDescription": "Preguntas habituales sobre My Terrace: halal, las vistas, horario del desayuno, narguile, distancia a Santa Sofía y reservas.",
+        "faqDescription": "Preguntas habituales sobre My Terrace: halal, las vistas, horario del desayuno, distancia a Santa Sofía y reservas.",
         "reservationsTitle": "Reservas",
         "reservationsDescription": "Reserva una mesa con vistas en My Terrace. Reserva rápida por WhatsApp o teléfono. Abierto a diario 08:30–01:00.",
         "homeTitle": "Restaurante con Terraza en Sultanahmet, Vistas a Santa Sofía",
-        "homeDescription": "Restaurante con terraza en la azotea en Sultanahmet con vistas a Santa Sofía, la Mezquita Azul y el mar de Mármara. Desayuno turco, kebabs, mariscos y narguile. Abierto a diario 08:30 – 01:00. Reserva tu mesa.",
+        "homeDescription": "Restaurante con terraza en la azotea en Sultanahmet con vistas a Santa Sofía, la Mezquita Azul y el mar de Mármara. Desayuno turco, kebabs, mariscos. Abierto a diario 08:30 – 01:00. Reserva tu mesa.",
         "menuTitle": "Menú — Desayuno Turco, Kebabs y Mariscos",
         "menuDescription": "Menú de My Terrace: un generoso desayuno turco, kebabs a la brasa, mariscos frescos, mezes y postres, en el corazón de Sultanahmet, con vistas.",
         "aboutTitle": "Nosotros — La Terraza con Vistas de Sultanahmet",

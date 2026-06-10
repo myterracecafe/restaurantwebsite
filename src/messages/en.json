@@ -15,7 +15,7 @@
     "Hero": {
         "eyebrow": "Sultanahmet · Istanbul",
         "title": "Rooftop Dining With Hagia Sophia & Sea Views",
-        "subtitle": "Turkish breakfast, charcoal kebabs, fresh seafood and hookah — served above the rooftops of Sultanahmet with a panoramic view of the historic peninsula.",
+        "subtitle": "Turkish breakfast, charcoal kebabs, fresh seafood — served above the rooftops of Sultanahmet with a panoramic view of the historic peninsula.",
         "ratingLabel": "Google reviews",
         "ctaMenu": "Explore the Menu",
         "ctaReserve": "Reserve on WhatsApp"
@@ -35,7 +35,7 @@
         "title": "A View Story in the Heart of Sultanahmet",
         "lead": "In the heart of Istanbul's historic peninsula, My Terrace Cafe Restaurant offers a dining experience where history meets flavour.",
         "p1": "Set in one of the most beautiful corners of Sultanahmet, a short walk from Hagia Sophia and the Blue Mosque, our rooftop terrace opens onto one of Istanbul's most captivating panoramas: the Sea of Marmara, passing ships and the golden light of sunset.",
-        "p2": "Our day opens at 08:30 with a generous spread of Turkish breakfast, continues through the afternoon with charcoal kebabs and fresh seafood, and stretches late into the evening over hookah and the view.",
+        "p2": "Our day opens at 08:30 with a generous spread of Turkish breakfast, continues through the afternoon with charcoal kebabs and fresh seafood, and stretches late into the evening, with the view.",
         "p3": "With warm, genuine and unpretentious hospitality, we prepare every plate with care and welcome every guest like a friend. Our goal is to nourish not just your appetite, but your memories of Istanbul.",
         "features": {
             "view": { "title": "Panoramic View", "desc": "An uninterrupted view of Hagia Sophia, the Blue Mosque and the Sea of Marmara." },
@@ -112,8 +112,8 @@
         "a5": "We serve a generous Turkish breakfast spread every morning from 08:30 — the perfect way to start the day with a view.",
         "q6": "Which tables have the best view?",
         "a6": "Our terrace level stands out with its sea and historic-peninsula view. If you'd like a table with a view, simply mention it when you book.",
-        "q7": "Can I smoke hookah (nargile) on the terrace?",
-        "a7": "Yes, you can enjoy hookah on our terrace alongside the view.",
+        "q7": "Can I book for groups or special celebrations?",
+        "a7": "Yes — our rooftop is ideal for sunsets and celebrations; arrange group bookings easily on WhatsApp.",
         "q8": "What is the best time for sunset?",
         "a8": "We recommend arriving about an hour before sunset; our terrace is a wonderful spot to watch the sun set over the Sea of Marmara.",
         "q9": "Are you family- and child-friendly?",
@@ -146,7 +146,7 @@
         }
     },
     "Footer": {
-        "tagline": "Rooftop terrace restaurant in Sultanahmet with Hagia Sophia and sea views. Turkish breakfast, kebabs, seafood and hookah.",
+        "tagline": "Rooftop terrace restaurant in Sultanahmet with Hagia Sophia and sea views. Turkish breakfast, kebabs, seafood.",
         "quickLinks": "Quick Links",
         "contact": "Contact",
         "hours": "Opening Hours",
@@ -157,11 +157,11 @@
     },
     "Seo": {
         "faqTitle": "Frequently Asked Questions",
-        "faqDescription": "Common questions about My Terrace: halal, the view, breakfast hours, hookah, distance to Hagia Sophia and reservations.",
+        "faqDescription": "Common questions about My Terrace: halal, the view, breakfast hours, distance to Hagia Sophia and reservations.",
         "reservationsTitle": "Reservations",
         "reservationsDescription": "Book a table with a view at My Terrace. Fast reservation via WhatsApp or phone. Open daily 08:30–01:00.",
         "homeTitle": "Sultanahmet Rooftop Restaurant, Hagia Sophia View",
-        "homeDescription": "Rooftop terrace restaurant in Sultanahmet with views of Hagia Sophia, the Blue Mosque and the Sea of Marmara. Turkish breakfast, kebabs, seafood & hookah. Open daily 08:30 – 01:00. Book a table.",
+        "homeDescription": "Rooftop terrace restaurant in Sultanahmet with views of Hagia Sophia, the Blue Mosque and the Sea of Marmara. Turkish breakfast, kebabs, seafood. Open daily 08:30 – 01:00. Book a table.",
         "menuTitle": "Menu — Turkish Breakfast, Kebabs & Seafood",
         "menuDescription": "My Terrace menu: a generous Turkish breakfast, charcoal kebabs, fresh seafood, meze and desserts — in the heart of Sultanahmet, with a view.",
         "aboutTitle": "About — Sultanahmet's Rooftop With a View",

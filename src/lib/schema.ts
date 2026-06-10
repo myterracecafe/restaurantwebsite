@@ -24,13 +24,13 @@ const ID = {
 const abs = (path: string) => (path.startsWith('http') ? path : `${BASE_URL}${path}`);
 
 const DESCRIPTIONS: Record<string, string> = {
-    tr: 'Sultanahmet’in kalbinde, Ayasofya, Sultanahmet Camii ve Marmara Denizi manzaralı teras restoran. Serpme Türk kahvaltısı, kebap, deniz ürünleri ve nargile.',
-    en: 'Rooftop terrace restaurant in the heart of Sultanahmet with views of Hagia Sophia, the Blue Mosque and the Sea of Marmara. Turkish breakfast, kebabs, seafood and hookah.',
-    ar: 'مطعم تراس في قلب السلطان أحمد بإطلالة على آيا صوفيا والمسجد الأزرق وبحر مرمرة. فطور تركي، كباب، مأكولات بحرية ونرجيلة.',
-    de: 'Dachterrassen-Restaurant im Herzen von Sultanahmet mit Blick auf die Hagia Sophia, die Blaue Moschee und das Marmarameer. Türkisches Frühstück, Kebab, Fisch und Shisha.',
-    ru: 'Ресторан с террасой на крыше в сердце Султанахмета с видом на Айя-Софию, Голубую мечеть и Мраморное море. Турецкий завтрак, кебабы, морепродукты и кальян.',
-    es: 'Restaurante con terraza en la azotea en el corazón de Sultanahmet con vistas a Santa Sofía, la Mezquita Azul y el mar de Mármara. Desayuno turco, kebabs, mariscos y narguile.',
-    fr: 'Restaurant avec terrasse sur le toit au cœur de Sultanahmet avec vue sur Sainte-Sophie, la Mosquée Bleue et la mer de Marmara. Petit-déjeuner turc, kebabs, fruits de mer et narguilé.',
+    tr: 'Sultanahmet’in kalbinde, Ayasofya, Sultanahmet Camii ve Marmara Denizi manzaralı teras restoran. Serpme Türk kahvaltısı, kebap, deniz ürünleri.',
+    en: 'Rooftop terrace restaurant in the heart of Sultanahmet with views of Hagia Sophia, the Blue Mosque and the Sea of Marmara. Turkish breakfast, kebabs, seafood.',
+    ar: 'مطعم تراس في قلب السلطان أحمد بإطلالة على آيا صوفيا والمسجد الأزرق وبحر مرمرة. فطور تركي، كباب، مأكولات بحرية.',
+    de: 'Dachterrassen-Restaurant im Herzen von Sultanahmet mit Blick auf die Hagia Sophia, die Blaue Moschee und das Marmarameer. Türkisches Frühstück, Kebab, Fisch.',
+    ru: 'Ресторан с террасой на крыше в сердце Султанахмета с видом на Айя-Софию, Голубую мечеть и Мраморное море. Турецкий завтрак, кебабы, морепродукты.',
+    es: 'Restaurante con terraza en la azotea en el corazón de Sultanahmet con vistas a Santa Sofía, la Mezquita Azul y el mar de Mármara. Desayuno turco, kebabs, mariscos.',
+    fr: 'Restaurant avec terrasse sur le toit au cœur de Sultanahmet avec vue sur Sainte-Sophie, la Mosquée Bleue et la mer de Marmara. Petit-déjeuner turc, kebabs, fruits de mer.',
 };
 
 const ALL_DAYS = [
@@ -127,7 +127,6 @@ export function restaurantSchema(locale: string) {
             ['Sea view', true],
             ['Hagia Sophia / Blue Mosque view', true],
             ['Outdoor seating', true],
-            ['Hookah / Nargile', true],
             ['Free WiFi', true],
             ['Halal options', true],
             ['Vegetarian options', true],
@@ -214,11 +213,6 @@ const DEFINED_TERMS: { id: string; name: LocalizedField; desc: LocalizedField }[
         id: 'serpme-kahvalti',
         name: { tr: 'Serpme Kahvaltı', en: 'Serpme Kahvaltı (Turkish breakfast spread)', ar: 'سرپمه كهفالتي (فطور تركي)', de: 'Serpme Kahvaltı (türkisches Frühstück)' },
         desc: { tr: 'Onlarca küçük tabaktan oluşan, paylaşımlı geleneksel Türk kahvaltısı.', en: 'A shared traditional Turkish breakfast served as dozens of small plates.', ar: 'فطور تركي تقليدي يُقدّم كعشرات الأطباق الصغيرة للمشاركة.', de: 'Ein geteiltes traditionelles türkisches Frühstück aus Dutzenden kleinen Tellern.' },
-    },
-    {
-        id: 'nargile',
-        name: { tr: 'Nargile', en: 'Nargile (hookah)', ar: 'نرجيلة', de: 'Nargile (Wasserpfeife)' },
-        desc: { tr: 'Geleneksel su piposu; terasta manzara eşliğinde sunulur.', en: 'Traditional water pipe, served on the terrace with the view.', ar: 'الشيشة التقليدية، تُقدّم على التراس مع الإطلالة.', de: 'Traditionelle Wasserpfeife, auf der Terrasse mit Aussicht serviert.' },
     },
     {
         id: 'sultanahmet-rooftop',

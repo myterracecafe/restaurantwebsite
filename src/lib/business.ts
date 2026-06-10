@@ -52,7 +52,7 @@ export function businessInfo(lang: string = routing.defaultLocale) {
         languages: SUPPORTED_LANGS,
         social: siteInfo.socials,
         halal: true,
-        features: ['rooftop terrace', 'sea view', 'Hagia Sophia & Blue Mosque view', 'hookah/nargile', 'outdoor seating', 'free WiFi', 'family friendly', 'vegetarian options', 'reservations'],
+        features: ['rooftop terrace', 'sea view', 'Hagia Sophia & Blue Mosque view', 'outdoor seating', 'free WiFi', 'family friendly', 'vegetarian options', 'reservations'],
     };
 }
 
